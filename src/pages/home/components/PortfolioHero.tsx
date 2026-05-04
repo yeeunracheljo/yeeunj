@@ -55,7 +55,7 @@ export default function PortfolioHero() {
       </p>
 
       <div
-        className="max-w-6xl mx-auto w-full transition-transform duration-300 ease-out will-change-transform"
+        className="max-w-6xl mx-auto w-full -translate-y-8 md:-translate-y-10 transition-transform duration-300 ease-out will-change-transform"
         style={{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
@@ -70,7 +70,7 @@ export default function PortfolioHero() {
           </div>
 
           {/* ── Right — Tagline + Graphic strip + Button ── */}
-          <div className="text-right flex flex-col items-end gap-4 max-w-sm md:translate-y-5">
+          <div className="text-right flex flex-col items-end gap-4 max-w-sm">
             <p className={`text-lg md:text-xl lg:text-xl text-gray-500 font-light leading-relaxed tracking-wide transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <span className="block">{t('hero.tagline1')}</span>
               <span className="block">{t('hero.tagline2')}</span>
