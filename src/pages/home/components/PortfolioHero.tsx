@@ -31,7 +31,7 @@ export default function PortfolioHero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[72vh] flex items-center justify-center px-6 md:px-12 lg:px-20 pt-24 pb-20 overflow-hidden"
+      className="relative min-h-[68vh] flex items-center justify-center px-6 md:px-12 lg:px-20 pt-20 pb-16 overflow-hidden"
       style={{ perspective: '1000px' }}
     >
       {/* ── Background Gradients ── */}
@@ -61,7 +61,7 @@ export default function PortfolioHero() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           {/* ── Left — Name + Role Badge ── */}
           <div className={`flex-shrink-0 transition-all duration-1000 delay-150 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-[#333] leading-none tracking-tight cursor-default select-none group">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-[#333] leading-none tracking-tight cursor-default select-none group">
               <span className="inline-block transition-all duration-700 hover:drop-shadow-[0_0_40px_rgba(24,118,251,0.15)] hover:scale-[1.02]">
                 {t('hero.name')}
               </span>

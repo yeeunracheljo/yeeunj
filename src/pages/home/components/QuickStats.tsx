@@ -106,7 +106,7 @@ export default function QuickStats() {
   }, [statItems]);
 
   return (
-    <section ref={sectionRef} className="pt-14 pb-10 md:pt-16 md:pb-14 relative overflow-hidden">
+    <section ref={sectionRef} className="pt-20 pb-10 md:pt-24 md:pb-14 relative overflow-hidden">
       {/* Full-width subtle blue gradient base */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#1876fb]/[0.04] via-transparent to-[#1876fb]/[0.04] pointer-events-none" />
 
