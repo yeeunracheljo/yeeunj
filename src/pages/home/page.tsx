@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-10 py-6 md:py-7 flex items-center justify-between bg-white/80 backdrop-blur-sm border-b border-gray-100">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-10 py-4 md:py-5 flex items-center justify-between bg-white/80 backdrop-blur-sm border-b border-gray-100">
         <span className="text-base font-semibold text-[#333] tracking-wide">
           {t('nav.portfolio')}
         </span>
@@ -49,7 +49,7 @@ export default function Home() {
             download
             target="_blank"
             rel="noopener noreferrer"
-            className="text-base font-medium text-[#333] flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 hover:bg-[#333] hover:text-white transition-colors cursor-pointer"
+            className="text-base font-medium text-[#333] flex items-center gap-2 px-5 py-2 rounded-full bg-gray-100 hover:bg-[#333] hover:text-white transition-colors cursor-pointer"
           >
             <i className="ri-download-line" />
             {t('nav.resume')}
@@ -61,7 +61,7 @@ export default function Home() {
       <main>
         <div className="bg-gradient-to-br from-white via-[#f8fbff]/60 to-[#eef5ff]/40">
           <PortfolioHero />
-          <div className="-mt-4 md:-mt-6">
+          <div>
             <QuickStats />
           </div>
         </div>

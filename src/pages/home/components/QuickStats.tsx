@@ -106,12 +106,12 @@ export default function QuickStats() {
   }, [statItems]);
 
   return (
-    <section ref={sectionRef} className="pt-0 pb-3 md:pt-12 md:pb-12 relative overflow-hidden">
+    <section ref={sectionRef} className="pt-16 pb-10 md:pt-20 md:pb-14 relative overflow-hidden">
       {/* Full-width subtle blue gradient base */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#1876fb]/[0.04] via-transparent to-[#1876fb]/[0.04] pointer-events-none" />
 
       {/* Top edge gradient line */}
-      <div className="absolute top-6 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1876fb]/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1876fb]/20 to-transparent" />
 
       {/* Subtle blue glow on left - expanded */}
       <div className="absolute top-1/2 -left-40 w-[500px] h-[500px] -translate-y-1/2 bg-[radial-gradient(circle_at_center,_#1876fb_0%,_rgba(24,118,251,0.05)_50%,_transparent_70%)] rounded-full blur-3xl pointer-events-none opacity-40" />
@@ -119,7 +119,7 @@ export default function QuickStats() {
       {/* Subtle blue glow on right - expanded */}
       <div className="absolute top-1/2 -right-40 w-[450px] h-[450px] -translate-y-1/2 bg-[radial-gradient(circle_at_center,_#1876fb_0%,_rgba(24,118,251,0.03)_50%,_transparent_70%)] rounded-full blur-3xl pointer-events-none opacity-30" />
 
-      <div className="max-w-5xl mx-auto mt-8 md:px-16 lg:px-20 relative z-10 flex flex-col items-center">
+      <div className="max-w-5xl mx-auto md:px-16 lg:px-20 relative z-10 flex flex-col items-center">
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {statItems.map((stat, index) => (
