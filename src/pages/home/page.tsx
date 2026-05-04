@@ -61,7 +61,7 @@ export default function Home() {
       <main>
         <div className="bg-gradient-to-br from-white via-[#f8fbff]/60 to-[#eef5ff]/40">
           <PortfolioHero />
-          <div className="mt-[5.0625rem] md:mt-[7.0625rem]">
+          <div className="mt-[5.125rem] md:mt-[7.125rem]">
             <QuickStats />
           </div>
         </div>
