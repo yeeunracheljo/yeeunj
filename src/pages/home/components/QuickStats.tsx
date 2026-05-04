@@ -56,7 +56,7 @@ function AnimatedNumber({ value }: { value: string }) {
   return (
     <p
       ref={ref}
-      className={`text-sm md:text-base font-serif text-[#333] tracking-tight transition-all duration-500 ${isAnimating ? 'scale-105 drop-shadow-[0_0_20px_rgba(24,118,251,0.3)] text-[#1876fb]' : ''}`}
+      className={`text-xs md:text-sm font-serif font-light text-[#333]/75 tracking-tight transition-all duration-500 ${isAnimating ? 'scale-105 drop-shadow-[0_0_14px_rgba(24,118,251,0.16)] text-[#1876fb]/80' : ''}`}
     >
       {display}
     </p>
@@ -106,18 +106,18 @@ export default function QuickStats() {
   }, [statItems]);
 
   return (
-    <section ref={sectionRef} className="pt-20 pb-10 md:pt-24 md:pb-14 relative overflow-hidden">
+    <section ref={sectionRef} className="pt-24 pb-10 md:pt-28 md:pb-14 relative overflow-hidden">
       {/* Full-width subtle blue gradient base */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1876fb]/[0.04] via-transparent to-[#1876fb]/[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1876fb]/[0.018] via-transparent to-[#1876fb]/[0.018] pointer-events-none" />
 
       {/* Top edge gradient line */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1876fb]/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1876fb]/10 to-transparent" />
 
       {/* Subtle blue glow on left - expanded */}
-      <div className="absolute top-1/2 -left-40 w-[500px] h-[500px] -translate-y-1/2 bg-[radial-gradient(circle_at_center,_#1876fb_0%,_rgba(24,118,251,0.05)_50%,_transparent_70%)] rounded-full blur-3xl pointer-events-none opacity-40" />
+      <div className="absolute top-1/2 -left-40 w-[500px] h-[500px] -translate-y-1/2 bg-[radial-gradient(circle_at_center,_#1876fb_0%,_rgba(24,118,251,0.025)_50%,_transparent_70%)] rounded-full blur-3xl pointer-events-none opacity-20" />
 
       {/* Subtle blue glow on right - expanded */}
-      <div className="absolute top-1/2 -right-40 w-[450px] h-[450px] -translate-y-1/2 bg-[radial-gradient(circle_at_center,_#1876fb_0%,_rgba(24,118,251,0.03)_50%,_transparent_70%)] rounded-full blur-3xl pointer-events-none opacity-30" />
+      <div className="absolute top-1/2 -right-40 w-[450px] h-[450px] -translate-y-1/2 bg-[radial-gradient(circle_at_center,_#1876fb_0%,_rgba(24,118,251,0.018)_50%,_transparent_70%)] rounded-full blur-3xl pointer-events-none opacity-16" />
 
       <div className="max-w-5xl mx-auto md:px-16 lg:px-20 relative z-10 flex flex-col items-center">
         {/* Stats Grid */}
@@ -125,25 +125,25 @@ export default function QuickStats() {
           {statItems.map((stat, index) => (
             <div
               key={stat.label}
-              className={`group relative min-h-[96px] md:min-h-[104px] rounded-2xl border border-[#e5e5e5] bg-white hover:bg-[#fafafa] hover:border-[#ccc] hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(0,0,0,0.06)] transition-all duration-700 cursor-default ${
+              className={`group relative min-h-[84px] md:min-h-[90px] rounded-xl border border-[#ececec] bg-white/85 hover:bg-white hover:border-[#dddddd] hover:scale-[1.015] hover:shadow-[0_0_28px_rgba(0,0,0,0.035)] transition-all duration-700 cursor-default ${
                 visibleCards[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Subtle blue gradient tint */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1876fb]/8 via-transparent to-[#1876fb]/5" />
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#1876fb]/5 via-transparent to-[#1876fb]/3" />
               
               {/* Top blue shimmer line on hover */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent via-[#1876fb]/50 to-transparent group-hover:w-full transition-all duration-700" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-px bg-gradient-to-r from-transparent via-[#1876fb]/25 to-transparent group-hover:w-full transition-all duration-700" />
 
-              <div className="relative h-full px-4 py-4 md:px-5 md:py-4 text-center flex flex-col items-center justify-center">
+              <div className="relative h-full px-4 py-3 md:px-5 md:py-3 text-center flex flex-col items-center justify-center">
                 {/* Number */}
-                <div className="mb-3">
+                <div className="mb-2">
                   <AnimatedNumber value={stat.value} />
                 </div>
 
                 {/* Label */}
-                <p className="text-[10px] md:text-[11px] text-[#333]/60 tracking-[0.14em] uppercase font-semibold leading-snug group-hover:text-[#333]/90 transition-colors duration-300">
+                <p className="text-[9px] md:text-[10px] text-[#333]/45 tracking-[0.16em] uppercase font-medium leading-snug group-hover:text-[#333]/65 transition-colors duration-300">
                   {stat.label}
                 </p>
               </div>
