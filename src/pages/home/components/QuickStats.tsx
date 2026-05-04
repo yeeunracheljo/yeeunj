@@ -56,7 +56,7 @@ function AnimatedNumber({ value }: { value: string }) {
   return (
     <p
       ref={ref}
-      className={`text-xs md:text-sm lg:text-base font-serif text-[#333] tracking-tight transition-all duration-500 ${isAnimating ? 'scale-105 drop-shadow-[0_0_20px_rgba(24,118,251,0.3)] text-[#1876fb]' : ''}`}
+      className={`text-sm md:text-base font-serif text-[#333] tracking-tight transition-all duration-500 ${isAnimating ? 'scale-105 drop-shadow-[0_0_20px_rgba(24,118,251,0.3)] text-[#1876fb]' : ''}`}
     >
       {display}
     </p>
@@ -106,7 +106,7 @@ export default function QuickStats() {
   }, [statItems]);
 
   return (
-    <section ref={sectionRef} className="pt-16 pb-10 md:pt-20 md:pb-14 relative overflow-hidden">
+    <section ref={sectionRef} className="pt-14 pb-10 md:pt-16 md:pb-14 relative overflow-hidden">
       {/* Full-width subtle blue gradient base */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#1876fb]/[0.04] via-transparent to-[#1876fb]/[0.04] pointer-events-none" />
 
@@ -125,7 +125,7 @@ export default function QuickStats() {
           {statItems.map((stat, index) => (
             <div
               key={stat.label}
-              className={`group relative rounded-2xl border border-[#e5e5e5] bg-white hover:bg-[#fafafa] hover:border-[#ccc] hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(0,0,0,0.06)] transition-all duration-700 cursor-default ${
+              className={`group relative min-h-[96px] md:min-h-[104px] rounded-2xl border border-[#e5e5e5] bg-white hover:bg-[#fafafa] hover:border-[#ccc] hover:scale-[1.03] hover:shadow-[0_0_50px_rgba(0,0,0,0.06)] transition-all duration-700 cursor-default ${
                 visibleCards[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -136,14 +136,14 @@ export default function QuickStats() {
               {/* Top blue shimmer line on hover */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent via-[#1876fb]/50 to-transparent group-hover:w-full transition-all duration-700" />
 
-              <div className="relative px-2 py-1.5 md:px-3 md:py-2 text-center">
+              <div className="relative h-full px-4 py-4 md:px-5 md:py-4 text-center flex flex-col items-center justify-center">
                 {/* Number */}
-                <div className="mb-2">
+                <div className="mb-3">
                   <AnimatedNumber value={stat.value} />
                 </div>
 
                 {/* Label */}
-                <p className="text-[10px] md:text-xs text-[#333]/60 tracking-[0.15em] uppercase font-semibold group-hover:text-[#333]/90 transition-colors duration-300">
+                <p className="text-[10px] md:text-[11px] text-[#333]/60 tracking-[0.14em] uppercase font-semibold leading-snug group-hover:text-[#333]/90 transition-colors duration-300">
                   {stat.label}
                 </p>
               </div>

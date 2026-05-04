@@ -31,7 +31,7 @@ export default function PortfolioHero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[78vh] flex items-center justify-center px-6 md:px-12 lg:px-20 pt-28 pb-24 overflow-hidden"
+      className="relative min-h-[72vh] flex items-center justify-center px-6 md:px-12 lg:px-20 pt-24 pb-20 overflow-hidden"
       style={{ perspective: '1000px' }}
     >
       {/* ── Background Gradients ── */}
@@ -61,7 +61,7 @@ export default function PortfolioHero() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           {/* ── Left — Name + Role Badge ── */}
           <div className={`flex-shrink-0 transition-all duration-1000 delay-150 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-[#333] leading-none tracking-tight cursor-default select-none group">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-[#333] leading-none tracking-tight cursor-default select-none group">
               <span className="inline-block transition-all duration-700 hover:drop-shadow-[0_0_40px_rgba(24,118,251,0.15)] hover:scale-[1.02]">
                 {t('hero.name')}
               </span>
@@ -70,8 +70,8 @@ export default function PortfolioHero() {
           </div>
 
           {/* ── Right — Tagline + Graphic strip + Button ── */}
-          <div className="text-right flex flex-col items-end gap-5 max-w-md">
-            <p className={`text-xl md:text-2xl lg:text-2xl text-gray-500 font-light leading-relaxed tracking-wide transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="text-right flex flex-col items-end gap-4 max-w-sm">
+            <p className={`text-lg md:text-xl lg:text-xl text-gray-500 font-light leading-relaxed tracking-wide transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <span className="block">{t('hero.tagline1')}</span>
               <span className="block">{t('hero.tagline2')}</span>
             </p>
@@ -79,7 +79,7 @@ export default function PortfolioHero() {
             <div className={`transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <button
                 onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative inline-flex items-center gap-4 px-10 py-5 bg-[#1876fb] text-white rounded-full text-xl font-bold overflow-hidden hover:bg-[#1463d5] hover:scale-105 hover:shadow-[0_0_40px_rgba(24,118,251,0.4)] active:scale-95 transition-all duration-500 whitespace-nowrap cursor-pointer shadow-xl"
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#1876fb] text-white rounded-full text-lg font-bold overflow-hidden hover:bg-[#1463d5] hover:scale-105 hover:shadow-[0_0_40px_rgba(24,118,251,0.4)] active:scale-95 transition-all duration-500 whitespace-nowrap cursor-pointer shadow-lg"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-white/10 via-transparent to-white/10" />
@@ -88,8 +88,8 @@ export default function PortfolioHero() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:w-full transition-all duration-700" />
 
                 <span className="relative z-10">View Work</span>
-                <span className="relative z-10 w-6 h-6 flex items-center justify-center">
-                  <i className="ri-arrow-right-line text-xl transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="relative z-10 w-5 h-5 flex items-center justify-center">
+                  <i className="ri-arrow-right-line text-lg transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
 
                 {/* Border ring on hover */}
