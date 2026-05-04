@@ -56,7 +56,7 @@ function AnimatedNumber({ value }: { value: string }) {
   return (
     <p
       ref={ref}
-      className={`text-xs md:text-sm font-serif font-light text-[#333]/75 tracking-tight transition-all duration-500 ${isAnimating ? 'scale-105 drop-shadow-[0_0_14px_rgba(24,118,251,0.16)] text-[#1876fb]/80' : ''}`}
+      className={`text-sm md:text-base font-serif font-bold text-[#333]/85 tracking-tight transition-all duration-500 ${isAnimating ? 'scale-105 drop-shadow-[0_0_14px_rgba(24,118,251,0.16)] text-[#1876fb]/80' : ''}`}
     >
       {display}
     </p>
@@ -106,9 +106,9 @@ export default function QuickStats() {
   }, [statItems]);
 
   return (
-    <section ref={sectionRef} className="relative h-[156px] md:h-[164px] overflow-hidden flex items-center">
+    <section ref={sectionRef} className="relative h-[150px] md:h-[158px] overflow-hidden flex items-center">
       {/* Full-width subtle blue gradient base */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1876fb]/[0.018] via-transparent to-[#1876fb]/[0.018] pointer-events-none" />
+      <div className="absolute top-px bottom-0 left-0 right-0 bg-gradient-to-r from-[#1876fb]/[0.014] via-white/20 to-[#1876fb]/[0.014] pointer-events-none" />
 
       {/* Top edge gradient line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1876fb]/10 to-transparent" />
