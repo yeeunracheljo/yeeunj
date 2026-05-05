@@ -56,7 +56,7 @@ export default function PortfolioHero() {
 
       <div
         className="max-w-6xl mx-auto w-full transition-transform duration-300 ease-out will-change-transform"
-        style={{ transform: `translateY(14px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
+        style={{ transform: `translateY(18px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           {/* ── Left — Name + Role Badge ── */}
