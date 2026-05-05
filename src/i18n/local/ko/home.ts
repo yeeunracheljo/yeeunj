@@ -23,7 +23,7 @@ export default {
   "about.tagline": "숫자를 움직이는 마케팅",
   "about.bio": "토론토 대학교 졸업생으로 콘텐츠 전략, 캠페인 실행, 오디언스 참여를 아우르는 실전 경험을 보유하고 있습니다. 사용자 행동과 콘텐츠 성과를 분석하여 패턴을 식별하고, 이를 통해 전략을 개선하고 측정 가능한 결과를 향상시킵니다.",
   "about.location": "한국, 서울 | 토론토, 온타리오",
-  "about.languages": "한국어 (전문가 수준), 영어 (모국어)",
+  "about.languages": "한국어 (모국어), 영어 (전문가 수준)",
   "about.linkedin": "링크드인",
   "about.educationTitle": "학력",
   "about.degree": "문학사 — 환경학 전공, 디지털 인문학 및 시각 연구 복수 부전공",

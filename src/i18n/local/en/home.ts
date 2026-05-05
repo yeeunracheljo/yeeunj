@@ -23,7 +23,7 @@ export default {
   "about.tagline": "Marketing that moves numbers",
   "about.bio": "University of Toronto graduate with hands-on experience across content strategy, campaign execution, and audience engagement. I analyze user behavior and content performance to identify patterns, then use those insights to refine strategy and improve measurable outcomes.",
   "about.location": "Korea, Seoul | Toronto, ON",
-  "about.languages": "Korean (Professional), English (Native)",
+  "about.languages": "Korean (Native), English (Professional)",
   "about.linkedin": "LinkedIn",
   "about.educationTitle": "EDUCATION",
   "about.degree": "Bachelor of Arts — Major in Environmental Studies, Double Minor in Digital Humanities and Visual Studies",
