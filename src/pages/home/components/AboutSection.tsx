@@ -127,8 +127,9 @@ export default function AboutSection() {
                   {t('about.resumeLabel')}
                 </h3>
                 <a
-                  href="https://drive.google.com/uc?export=download&id=11ISdfobzlD0cdID67ffzwFt8-NSu6wyZ"
-                  download
+                  href="https://drive.google.com/file/d/11ISdfobzlD0cdID67ffzwFt8-NSu6wyZ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex items-center gap-4 px-5 py-4 bg-[#1876fb] rounded-xl hover:bg-[#1463d5] transition-all cursor-pointer shadow-sm hover:shadow-lg hover:-translate-y-0.5"
                 >
                   <div className="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center shrink-0">

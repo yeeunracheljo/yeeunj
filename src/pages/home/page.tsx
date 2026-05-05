@@ -45,8 +45,7 @@ export default function Home() {
             {t('nav.contact')}
           </button>
           <a
-            href="https://drive.google.com/uc?export=download&id=11ISdfobzlD0cdID67ffzwFt8-NSu6wyZ"
-            download
+            href="https://drive.google.com/file/d/11ISdfobzlD0cdID67ffzwFt8-NSu6wyZ/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-[#333] flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 hover:bg-[#333] hover:text-white transition-colors cursor-pointer"
