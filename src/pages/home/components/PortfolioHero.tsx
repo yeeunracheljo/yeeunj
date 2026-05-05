@@ -44,11 +44,6 @@ export default function PortfolioHero() {
       {/* Right-bottom soft white glow */}
       <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.8)_0%,_transparent_70%)] rounded-full blur-3xl pointer-events-none" />
 
-      {/* Decorative floating shapes */}
-      <div className={`absolute top-28 left-[15%] w-3 h-3 rounded-full border border-[#1876fb]/30 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} />
-      <div className={`absolute bottom-32 left-[25%] w-4 h-4 rounded-lg border border-[#1876fb]/15 rotate-45 transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} />
-      <div className={`absolute bottom-24 right-[15%] w-2.5 h-2.5 rounded-full bg-[#1876fb]/10 transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} />
-
       {/* Location label */}
       <p className={`absolute top-6 right-8 text-xs text-gray-400 tracking-widest uppercase transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'}`}>
         {t('hero.location')}
