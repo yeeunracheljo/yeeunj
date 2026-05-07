@@ -175,7 +175,7 @@ export const anuaResults = {
     totalRespondents: 260,
     targetGroup: "20s North American female residents",
     keyInsight:
-      "Among 260 respondents, 41 (15.76%) confirmed purchases driven by repetition exposure (FYP ratio 5+) and trend, regardless of product efficacy.",
+      "Among 260 respondents, 41 (15.41%) confirmed purchases driven by repetition exposure (FYP ratio 5+) and trend, regardless of product efficacy.",
   },
   screeningCriteria: {
     title: "Interview Screening Criteria",
@@ -220,7 +220,7 @@ export const anuaResults = {
       description: "Buys trendy brands like Rare Beauty, Rhode.",
     },
     {
-      percentage: "15.76%",
+      percentage: "15.41%",
       count: "41 / 260",
       label: "Trend-Driven Purchases",
       description: "Bought purely from trend or repeated exposure.",

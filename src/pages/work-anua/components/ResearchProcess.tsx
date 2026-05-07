@@ -14,7 +14,7 @@ export default function ResearchProcess() {
   const keyStats = [
     { percentage: "73.85%", count: "192 / 260", label: t('research.stat1Label'), description: t('research.stat1Desc') },
     { percentage: "55.26%", count: "147 / 266", label: t('research.stat2Label'), description: t('research.stat2Desc') },
-    { percentage: "15.76%", count: "41 / 260", label: t('research.stat3Label'), description: t('research.stat3Desc') },
+    { percentage: "15.41%", count: "41 / 260", label: t('research.stat3Label'), description: t('research.stat3Desc') },
   ];
 
   const patterns = [
