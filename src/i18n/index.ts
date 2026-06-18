@@ -11,7 +11,7 @@ i18n
     lng: defaultLang,
     fallbackLng: 'en',
     debug: false,
-    ns: ['common', 'home', 'work', 'workAnua', 'workLG', 'workReta', 'workMacsLearning', 'workUtkcc'],
+    ns: ['common', 'home', 'work', 'workAnua', 'workLG', 'workReta', 'workMacsLearning', 'workUtkcc', 'workDrRejuall'],
     defaultNS: 'common',
     resources: messages,
     interpolation: {

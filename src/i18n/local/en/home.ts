@@ -23,7 +23,7 @@ export default {
   "about.tagline": "Marketing that moves numbers",
   "about.bio": "University of Toronto graduate with hands-on experience across content strategy, campaign execution, and audience engagement. I analyze user behavior and content performance to identify patterns, then use those insights to refine strategy and improve measurable outcomes.",
   "about.location": "Korea, Seoul | Toronto, ON",
-  "about.languages": "Korean (Native), English (Professional)",
+  "about.languages": "Korean (Professional), English (Native)",
   "about.linkedin": "LinkedIn",
   "about.educationTitle": "EDUCATION",
   "about.degree": "Bachelor of Arts — Major in Environmental Studies, Double Minor in Digital Humanities and Visual Studies",
@@ -63,6 +63,13 @@ export default {
   "work.anua.desc": "Led a 260-person consumer study and Meta ad campaign to identify why 20s North American females don't convert on K-beauty, resulting in actionable positioning recommendations.",
   "work.anua.tags": "Consumer Insights,Market Entry,Gen Z Strategy",
   "work.anua.category": "Performance Marketing",
+
+  "work.drRejuall.title": "Dr. Rejuall Brand Portfolio",
+  "work.drRejuall.org": "Dr. Rejuall",
+  "work.drRejuall.period": "2026",
+  "work.drRejuall.desc": "Built a polished beauty brand portfolio case with a clear content hierarchy, calm visual direction, and digital-first presentation structure.",
+  "work.drRejuall.tags": "Brand Direction,Content Strategy,Digital Portfolio",
+  "work.drRejuall.category": "Beauty / Brand Portfolio",
 
   "work.lg.title": "LG Interbrand Top 100 Strategy",
   "work.lg.org": "SNU x LG Electronics",

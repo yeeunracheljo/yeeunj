@@ -23,7 +23,7 @@ export default {
   "about.tagline": "숫자를 움직이는 마케팅",
   "about.bio": "토론토 대학교 졸업생으로 콘텐츠 전략, 캠페인 실행, 오디언스 참여를 아우르는 실전 경험을 보유하고 있습니다. 사용자 행동과 콘텐츠 성과를 분석하여 패턴을 식별하고, 이를 통해 전략을 개선하고 측정 가능한 결과를 향상시킵니다.",
   "about.location": "한국, 서울 | 토론토, 온타리오",
-  "about.languages": "한국어 (모국어), 영어 (전문가 수준)",
+  "about.languages": "한국어 (전문가 수준), 영어 (모국어)",
   "about.linkedin": "링크드인",
   "about.educationTitle": "학력",
   "about.degree": "문학사 — 환경학 전공, 디지털 인문학 및 시각 연구 복수 부전공",
@@ -63,6 +63,13 @@ export default {
   "work.anua.desc": "260명의 소비자 연구와 Meta 광고 캠페인을 주도하여 20대 북미 여성이 K-뷰티에서 전환되지 않는 이유를 파악하고 실행 가능한 포지셔닝 전략을 도출했습니다.",
   "work.anua.tags": "소비자 통찰,시장 진출,Z세대 전략",
   "work.anua.category": "퍼포먼스 마케팅",
+
+  "work.drRejuall.title": "닥터리쥬올 브랜드 포트폴리오",
+  "work.drRejuall.org": "닥터리쥬올",
+  "work.drRejuall.period": "2026",
+  "work.drRejuall.desc": "명확한 콘텐츠 위계, 차분한 비주얼 방향성, 디지털 중심의 소개 구조를 갖춘 뷰티 브랜드 포트폴리오 케이스입니다.",
+  "work.drRejuall.tags": "브랜드 방향성,콘텐츠 전략,디지털 포트폴리오",
+  "work.drRejuall.category": "뷰티 / 브랜드 포트폴리오",
 
   "work.lg.title": "LG Interbrand Top 100 전략",
   "work.lg.org": "SNU x LG Electronics",

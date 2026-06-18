@@ -1,0 +1,20 @@
+export default {
+  "project.title": "Dr. Rejuall Brand Portfolio",
+  "project.subtitle": "Brand presentation and content direction for a beauty-focused portfolio case",
+  "project.institution": "Dr. Rejuall",
+  "project.period": "2026",
+  "project.tags": "Brand Direction,Content Strategy,Digital Portfolio",
+  "hero.label": "Beauty / Brand Portfolio",
+  "overview.title": "Overview",
+  "overview.body": "Dr. Rejuall is presented as a beauty brand portfolio case focused on communicating a refined visual identity, clear service positioning, and a polished digital first impression.",
+  "role.title": "Role",
+  "role.items": "Portfolio structure|Brand message framing|Visual direction|Content hierarchy",
+  "challenge.title": "Challenge",
+  "challenge.body": "The project needed to feel professional and trustworthy while staying visually soft enough for a beauty and wellness audience. The page structure prioritizes quick understanding, concise proof points, and a clear brand atmosphere.",
+  "approach.title": "Approach",
+  "approach.items": "Organized the story around brand clarity, audience trust, and visual consistency.|Used a warm neutral palette to support a premium, calm impression.|Structured the page so future campaign assets, screenshots, and measurable results can be added without changing the overall layout.",
+  "highlights.title": "Project Highlights",
+  "highlights.items": "Brand portfolio entry added to the selected work section|Dedicated detail page created for the project|Cross-links added from the other project pages",
+  "insight.title": "Key Insight",
+  "insight.body": "For beauty and clinic-adjacent brands, credibility is built through restraint: clear hierarchy, calm visuals, and direct messaging often make the experience feel more premium than overly decorative presentation."
+};

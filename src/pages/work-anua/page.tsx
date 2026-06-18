@@ -16,6 +16,7 @@ import InsightSection from "./components/InsightSection";
 const otherProjects = [
   { title: "Karrot Campus Sprint", path: "/work/karrot-campus-sprint" },
   { title: "LG Interbrand Top 100 Strategy", path: "/work/lg-interbrand-strategy" },
+  { title: "Dr. Rejuall Brand Portfolio", path: "/work/dr-rejuall" },
   { title: "Reta", path: "/work/reta" },
   { title: "Macs Learning Lab", path: "/work/macslearning" },
   { title: "UTKCC", path: "/work/utkcc" },
@@ -80,7 +81,7 @@ export default function WorkAnua() {
             <h2 className="text-2xl md:text-3xl font-serif text-gray-900 mb-12">
               {t("nav.otherProjects")}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
               {otherProjects.map((project) => (
                 <Link
                   key={project.title}

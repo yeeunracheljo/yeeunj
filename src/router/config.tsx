@@ -8,6 +8,7 @@ import WorkLG from "../pages/work-lg/page";
 import WorkReta from "../pages/work-reta/page";
 import WorkMacsLearning from "../pages/work-macslearning/page";
 import WorkUtkcc from "../pages/work-utkcc/page";
+import WorkDrRejuall from "../pages/work-dr-rejuall/page";
 
 const routes: RouteObject[] = [
   {
@@ -26,6 +27,10 @@ const routes: RouteObject[] = [
   {
     path: "/work/lg-interbrand-strategy",
     element: <WorkLG />,
+  },
+  {
+    path: "/work/dr-rejuall",
+    element: <WorkDrRejuall />,
   },
   {
     path: "/work/reta",

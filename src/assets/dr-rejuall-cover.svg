@@ -1,0 +1,17 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="820" fill="#F6F1EC"/>
+  <rect x="80" y="76" width="1040" height="668" rx="34" fill="#FFFFFF"/>
+  <rect x="124" y="120" width="952" height="580" rx="28" fill="#F9F5F1"/>
+  <circle cx="864" cy="275" r="148" fill="#D9B9A8"/>
+  <circle cx="930" cy="248" r="84" fill="#F1DCD0"/>
+  <path d="M170 532C266 430 368 388 476 407C579 425 652 518 752 511C829 506 888 445 977 460C1039 470 1078 514 1112 570V700H170V532Z" fill="#E9CDC0"/>
+  <rect x="170" y="174" width="380" height="28" rx="14" fill="#B88B78"/>
+  <rect x="170" y="226" width="480" height="18" rx="9" fill="#D9B9A8"/>
+  <rect x="170" y="268" width="344" height="18" rx="9" fill="#D9B9A8"/>
+  <rect x="170" y="340" width="148" height="42" rx="21" fill="#2F2A27"/>
+  <rect x="340" y="340" width="178" height="42" rx="21" fill="#EFE5DD"/>
+  <rect x="187" y="352" width="98" height="18" rx="9" fill="#FFFFFF"/>
+  <rect x="365" y="352" width="128" height="18" rx="9" fill="#B88B78"/>
+  <text x="170" y="640" fill="#2F2A27" font-family="Georgia, serif" font-size="88" letter-spacing="1">Dr. Rejuall</text>
+  <text x="174" y="686" fill="#8E695A" font-family="Arial, sans-serif" font-size="26" letter-spacing="4">BRAND PORTFOLIO</text>
+</svg>
