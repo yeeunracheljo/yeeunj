@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import drRejuallCover from '@/assets/dr-rejuall-cover.svg';
+import drRejuallCover from '@/assets/dr-rejuall-cover.png';
 
 export default function WorkSection() {
   const { t } = useTranslation('home');
@@ -23,6 +23,17 @@ export default function WorkSection() {
   }, []);
 
   const projects = [
+    {
+      title: t('work.drRejuall.title'),
+      org: t('work.drRejuall.org'),
+      orgLink: null,
+      period: t('work.drRejuall.period'),
+      tags: t('work.drRejuall.tags').split(','),
+      hoverAccent: 'group-hover:text-[#1876fb]',
+      category: t('work.drRejuall.category'),
+      path: "/work/dr-rejuall",
+      imageUrl: drRejuallCover,
+    },
     {
       title: t('work.utkcc.title'),
       org: t('work.utkcc.org'),
@@ -55,17 +66,6 @@ export default function WorkSection() {
       category: t('work.anua.category'),
       path: "/work/anua-consumer-report",
       imageUrl: "https://static.readdy.ai/image/e679ae5d6390c98981290ae1f1ab73f8/ebb58bd370aa5de35209540241967e8e.png",
-    },
-    {
-      title: t('work.drRejuall.title'),
-      org: t('work.drRejuall.org'),
-      orgLink: null,
-      period: t('work.drRejuall.period'),
-      tags: t('work.drRejuall.tags').split(','),
-      hoverAccent: 'group-hover:text-[#1876fb]',
-      category: t('work.drRejuall.category'),
-      path: "/work/dr-rejuall",
-      imageUrl: drRejuallCover,
     },
     {
       title: t('work.lg.title'),

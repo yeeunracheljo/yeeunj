@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useCallback, useEffect, useState } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import drRejuallCover from "@/assets/dr-rejuall-cover.svg";
+import drRejuallCover from "@/assets/dr-rejuall-cover.png";
 
 const otherProjects = [
   { title: "Karrot Campus Sprint", path: "/work/karrot-campus-sprint" },
@@ -29,6 +30,49 @@ export default function WorkDrRejuall() {
   });
   const guidelineItems = t("guidelines.items").split("|");
   const resumeItems = t("resume.items").split("|");
+  const [activeId, setActiveId] = useState("overview");
+
+  const tocItems = [
+    { id: "overview", label: t("toc.overview") },
+    { id: "metrics", label: t("toc.metrics") },
+    { id: "market", label: t("toc.market") },
+    { id: "strategy", label: t("toc.strategy") },
+    { id: "execution", label: t("toc.execution") },
+    { id: "guidelines", label: t("toc.guidelines") },
+    { id: "results", label: t("toc.results") },
+    { id: "resume", label: t("toc.resume") },
+    { id: "insight", label: t("toc.insight") },
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-15% 0px -70% 0px" }
+    );
+
+    tocItems.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const scrollTo = useCallback((id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const navHeight = 108;
+      const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F9F5F1]">
@@ -98,33 +142,38 @@ export default function WorkDrRejuall() {
             <img
               src={drRejuallCover}
               alt={t("project.title")}
-              className="w-full rounded-2xl shadow-xl border border-white object-cover"
+              className="w-full rounded-2xl shadow-xl border border-white object-cover aspect-[1.03/1]"
             />
           </div>
         </section>
 
-        <section className="pb-16 md:pb-24">
-          <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {metricItems.map((metric) => (
-              <article
-                key={metric.label}
-                className="bg-white rounded-2xl p-5 md:p-6 border border-[#EFE5DD] shadow-sm"
-              >
-                <p className="font-serif text-3xl md:text-4xl text-[#2F2A27] leading-none">
-                  {metric.value}
-                </p>
-                <p className="mt-3 text-sm font-semibold text-[#8E695A]">
-                  {metric.label}
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-[#8A7A72]">
-                  {metric.detail}
-                </p>
-              </article>
-            ))}
+        <div className="sticky top-[60px] z-40 bg-white/95 backdrop-blur-sm border-b border-[#EFE5DD]">
+          <div className="mx-auto px-4 md:px-6">
+            <nav className="flex items-center justify-center gap-1 overflow-x-auto py-2.5 no-scrollbar">
+              {tocItems.map((item, index) => {
+                const isActive = activeId === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollTo(item.id)}
+                    className={`shrink-0 flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs md:text-sm font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? "bg-[#B88B78]/15 text-[#8E695A]"
+                        : "text-[#8A7A72]/70 hover:text-[#2F2A27] hover:bg-[#F9F5F1]"
+                    }`}
+                  >
+                    <span className={`text-[10px] font-mono ${isActive ? "text-[#8E695A]" : "text-[#D9B9A8]"}`}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>{item.label}</span>
+                  </button>
+                );
+              })}
+            </nav>
           </div>
-        </section>
+        </div>
 
-        <section className="py-16 md:py-24 bg-white">
+        <section id="overview" className="py-16 md:py-24 bg-white scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <article className="lg:col-span-2">
               <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">
@@ -148,7 +197,28 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-[#F9F5F1]">
+        <section id="metrics" className="py-16 md:py-24 scroll-mt-28">
+          <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-5 gap-4">
+            {metricItems.map((metric) => (
+              <article
+                key={metric.label}
+                className="bg-white rounded-2xl p-5 md:p-6 border border-[#EFE5DD] shadow-sm"
+              >
+                <p className="font-serif text-3xl md:text-4xl text-[#2F2A27] leading-none">
+                  {metric.value}
+                </p>
+                <p className="mt-3 text-sm font-semibold text-[#8E695A]">
+                  {metric.label}
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-[#8A7A72]">
+                  {metric.detail}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="market" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
             <div className="max-w-3xl mb-10">
               <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">
@@ -169,7 +239,7 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section id="strategy" className="py-16 md:py-24 scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             <article className="bg-white rounded-2xl p-7 md:p-8 border border-[#EFE5DD]">
               <h2 className="font-serif text-2xl text-[#2F2A27] mb-5">{t("challenge.title")}</h2>
@@ -188,7 +258,25 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-white">
+        <section id="execution" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
+          <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+            <article className="md:col-span-1">
+              <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">
+                {t("execution.label")}
+              </p>
+              <h2 className="font-serif text-3xl text-[#2F2A27] leading-tight">
+                {t("execution.title")}
+              </h2>
+            </article>
+            <article className="md:col-span-2 bg-white rounded-2xl p-7 md:p-8 border border-[#EFE5DD]">
+              <p className="text-[#6F625B] leading-relaxed">
+                {t("execution.body")}
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="guidelines" className="py-16 md:py-24 bg-white scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-8 items-start">
             <article className="bg-[#2F2A27] rounded-2xl p-7 md:p-8 text-white">
               <p className="text-xs uppercase tracking-[0.24em] text-[#D9B9A8] mb-4">
@@ -212,7 +300,7 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-white">
+        <section id="results" className="py-16 md:py-24 bg-white scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="font-serif text-3xl text-[#2F2A27] mb-10">{t("highlights.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -226,7 +314,7 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-white">
+        <section id="resume" className="py-16 md:py-24 bg-white scroll-mt-28">
           <div className="max-w-4xl mx-auto px-6">
             <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">
               {t("resume.label")}
@@ -257,7 +345,7 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-[#F9F5F1]">
+        <section id="insight" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-5">
               {t("insight.title")}
