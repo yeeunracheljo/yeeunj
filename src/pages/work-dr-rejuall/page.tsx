@@ -19,6 +19,16 @@ export default function WorkDrRejuall() {
   const roleItems = t("role.items").split("|");
   const approachItems = t("approach.items").split("|");
   const highlightItems = t("highlights.items").split("|");
+  const metricItems = t("metrics.items").split("|").map((item) => {
+    const [value, label, detail] = item.split("~");
+    return { value, label, detail };
+  });
+  const marketItems = t("market.items").split("|").map((item) => {
+    const [title, body] = item.split("~");
+    return { title, body };
+  });
+  const guidelineItems = t("guidelines.items").split("|");
+  const resumeItems = t("resume.items").split("|");
 
   return (
     <div className="min-h-screen bg-[#F9F5F1]">
@@ -93,6 +103,27 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
+        <section className="pb-16 md:pb-24">
+          <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {metricItems.map((metric) => (
+              <article
+                key={metric.label}
+                className="bg-white rounded-2xl p-5 md:p-6 border border-[#EFE5DD] shadow-sm"
+              >
+                <p className="font-serif text-3xl md:text-4xl text-[#2F2A27] leading-none">
+                  {metric.value}
+                </p>
+                <p className="mt-3 text-sm font-semibold text-[#8E695A]">
+                  {metric.label}
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-[#8A7A72]">
+                  {metric.detail}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <article className="lg:col-span-2">
@@ -117,6 +148,27 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
+        <section className="py-16 md:py-24 bg-[#F9F5F1]">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-3xl mb-10">
+              <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">
+                {t("market.title")}
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] leading-tight">
+                {t("market.subtitle")}
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {marketItems.map((item) => (
+                <article key={item.title} className="bg-white rounded-2xl p-6 border border-[#EFE5DD]">
+                  <h3 className="text-base font-semibold text-[#2F2A27] mb-3">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-[#6F625B]">{item.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 md:py-24">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             <article className="bg-white rounded-2xl p-7 md:p-8 border border-[#EFE5DD]">
@@ -137,6 +189,30 @@ export default function WorkDrRejuall() {
         </section>
 
         <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-8 items-start">
+            <article className="bg-[#2F2A27] rounded-2xl p-7 md:p-8 text-white">
+              <p className="text-xs uppercase tracking-[0.24em] text-[#D9B9A8] mb-4">
+                {t("guidelines.label")}
+              </p>
+              <h2 className="font-serif text-3xl leading-tight mb-5">
+                {t("guidelines.title")}
+              </h2>
+              <p className="text-white/70 leading-relaxed">
+                {t("guidelines.body")}
+              </p>
+            </article>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {guidelineItems.map((item, index) => (
+                <article key={item} className="rounded-2xl p-5 border border-[#EFE5DD] bg-[#F9F5F1]">
+                  <span className="text-xs font-semibold text-[#B88B78]">GUIDE 0{index + 1}</span>
+                  <p className="mt-3 text-sm leading-relaxed text-[#2F2A27]">{item}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-white">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="font-serif text-3xl text-[#2F2A27] mb-10">{t("highlights.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -146,6 +222,37 @@ export default function WorkDrRejuall() {
                   <p className="mt-4 text-[#2F2A27] leading-relaxed">{item}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-4xl mx-auto px-6">
+            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">
+              {t("resume.label")}
+            </p>
+            <div className="rounded-2xl border border-[#EFE5DD] bg-[#F9F5F1] p-7 md:p-8">
+              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+                <div>
+                  <h2 className="font-serif text-2xl md:text-3xl text-[#2F2A27]">
+                    {t("resume.title")}
+                  </h2>
+                  <p className="mt-2 text-sm font-semibold text-[#8E695A]">
+                    {t("resume.period")}
+                  </p>
+                </div>
+                <span className="w-fit rounded-full bg-white px-4 py-2 text-xs font-semibold text-[#8E695A] border border-[#E9CDC0]">
+                  {t("resume.badge")}
+                </span>
+              </div>
+              <div className="space-y-3">
+                {resumeItems.map((item) => (
+                  <div key={item} className="flex items-start gap-3 text-sm md:text-base text-[#6F625B]">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#B88B78] shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

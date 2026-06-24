@@ -64,12 +64,12 @@ export default {
   "work.anua.tags": "Consumer Insights,Market Entry,Gen Z Strategy",
   "work.anua.category": "Performance Marketing",
 
-  "work.drRejuall.title": "Dr. Rejuall Brand Portfolio",
-  "work.drRejuall.org": "Dr. Rejuall",
-  "work.drRejuall.period": "2026",
-  "work.drRejuall.desc": "Built a polished beauty brand portfolio case with a clear content hierarchy, calm visual direction, and digital-first presentation structure.",
-  "work.drRejuall.tags": "Brand Direction,Content Strategy,Digital Portfolio",
-  "work.drRejuall.category": "Beauty / Brand Portfolio",
+  "work.drRejuall.title": "NEOSIMPLIX (Dr. Rejuall)",
+  "work.drRejuall.org": "Global Marketing Intern",
+  "work.drRejuall.period": "2026.06 – Present",
+  "work.drRejuall.desc": "Built UK skincare content and influencer strategy by analyzing 5,000 influencer profiles, establishing 30 partnerships, exceeding the mega influencer goal by 300%, and reaching 120% of the monthly content KPI within 3 weeks.",
+  "work.drRejuall.tags": "UK Market Research,Influencer Marketing,KPI Management",
+  "work.drRejuall.category": "Beauty / Global Marketing",
 
   "work.lg.title": "LG Interbrand Top 100 Strategy",
   "work.lg.org": "SNU x LG Electronics",

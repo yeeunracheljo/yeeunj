@@ -16,7 +16,7 @@ import InsightSection from "./components/InsightSection";
 const otherProjects = [
   { title: "Karrot Campus Sprint", path: "/work/karrot-campus-sprint" },
   { title: "LG Interbrand Top 100 Strategy", path: "/work/lg-interbrand-strategy" },
-  { title: "Dr. Rejuall Brand Portfolio", path: "/work/dr-rejuall" },
+  { title: "NEOSIMPLIX (Dr. Rejuall)", path: "/work/dr-rejuall" },
   { title: "Reta", path: "/work/reta" },
   { title: "Macs Learning Lab", path: "/work/macslearning" },
   { title: "UTKCC", path: "/work/utkcc" },
