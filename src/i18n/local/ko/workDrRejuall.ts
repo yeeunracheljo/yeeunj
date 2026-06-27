@@ -1,10 +1,15 @@
 export default {
   "project.eyebrow": "NeoSimplix Global Marketing Internship",
   "project.title": "DR. REJUALL",
-  "project.subtitle": "Building UK Growth Strategy through Market Intelligence",
+  "project.subtitle": "UK Market Intelligence & Content Strategy",
   "project.institution": "NeoSimplix | Global Influencer Marketing Intern",
-  "project.period": "June 2026 – Present",
+  "project.period": "May 2026 – Present",
   "project.tags": "영국 시장 리서치,인플루언서 마케팅,KPI 관리,글로벌 시장 분석",
+  "project.caseLabel": "K-Beauty Global Market Case",
+  "project.caseTitle": "UK Market Intelligence & Content Strategy",
+  "project.products": "PDRN Cream~Product Photo Slot|PDRN Lip Serum~Product Photo Slot",
+  "project.roleTitle": "Role",
+  "project.roles": "Market Research|Competitor Analysis|Consumer Insight|Content Strategy",
 
   "toc.overview": "Overview",
   "toc.performance": "Performance",
@@ -52,6 +57,7 @@ export default {
   "research.tableResponse": "Consumer Response",
   "research.tableAction": "Our Action",
   "research.benchmark": "Medik8~Clinical, Anti-aging~높은 신뢰도~Clinical Messaging 적용|Simple~Gentle, Sensitive Skin~피부 장벽 중심~Barrier 표현 보완|Dr. Rejuall~PDRN 중심~효능 메시지 강화 필요~Anti-aging 중심으로 Talking Point 변경",
+  "research.brands": "Medik8~Product Photo Slot~Clinical~Anti-aging|Simple~Product Photo Slot~Barrier~Sensitive|Dr. Rejuall~Product Photo Slot~PDRN~Clinical",
 
   "insights.label": "Key Insights",
   "insights.title": "From Consumer Signal to Strategic Direction",
@@ -63,6 +69,9 @@ export default {
   "strategy.title": "Turning Research Into Creator-Ready Strategy",
   "strategy.body": "리서치 결과를 단순 분석으로 끝내지 않고, 실제 크리에이터가 촬영할 수 있는 메시지, 후킹 문장, CTA, 톤앤매너로 전환했습니다.",
   "strategy.cards": "PDRN Cream~Anti-aging 효용을 중심으로 임상 기반 신뢰 메시지를 강화|PDRN Lip Serum~입술 주름, 볼륨감, 데일리 루틴 맥락으로 제품 효용 구체화|Clinical Messaging~성분 근거와 효능 설명을 함께 보여주는 콘텐츠 구조 적용|Tone & Manner~영국 소비자에게 과장 없이 신뢰감 있게 느껴지는 표현으로 조정",
+  "strategy.products": "PDRN Cream~Anti-aging~Anti-aging~Clinical~Before After|PDRN Lip Serum~Lip Volume~Lip Volume~Hydration~Clinical",
+  "strategy.imageCaption": "Product Photo Slot",
+  "strategy.talkingPoint": "Talking Point",
 
   "deliverables.label": "Strategic Deliverables",
   "deliverables.title": "Product Content Guidelines & UK Marketing Support",

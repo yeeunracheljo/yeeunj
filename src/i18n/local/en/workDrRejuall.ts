@@ -1,10 +1,15 @@
 export default {
   "project.eyebrow": "NeoSimplix Global Marketing Internship",
   "project.title": "DR. REJUALL",
-  "project.subtitle": "Building UK Growth Strategy through Market Intelligence",
+  "project.subtitle": "UK Market Intelligence & Content Strategy",
   "project.institution": "NeoSimplix | Global Influencer Marketing Intern",
-  "project.period": "June 2026 – Present",
+  "project.period": "May 2026 – Present",
   "project.tags": "UK Market Research,Influencer Marketing,KPI Management,Global Market Analysis",
+  "project.caseLabel": "K-Beauty Global Market Case",
+  "project.caseTitle": "UK Market Intelligence & Content Strategy",
+  "project.products": "PDRN Cream~Product Photo Slot|PDRN Lip Serum~Product Photo Slot",
+  "project.roleTitle": "Role",
+  "project.roles": "Market Research|Competitor Analysis|Consumer Insight|Content Strategy",
 
   "toc.overview": "Overview",
   "toc.performance": "Performance",
@@ -52,6 +57,7 @@ export default {
   "research.tableResponse": "Consumer Response",
   "research.tableAction": "Our Action",
   "research.benchmark": "Medik8~Clinical, Anti-aging~High credibility~Applied clinical messaging|Simple~Gentle, Sensitive Skin~Barrier-care response~Strengthened barrier-friendly language|Dr. Rejuall~PDRN-led~Benefit message needed strengthening~Shifted the talking point toward anti-aging",
+  "research.brands": "Medik8~Product Photo Slot~Clinical~Anti-aging|Simple~Product Photo Slot~Barrier~Sensitive|Dr. Rejuall~Product Photo Slot~PDRN~Clinical",
 
   "insights.label": "Key Insights",
   "insights.title": "From Consumer Signal to Strategic Direction",
@@ -63,6 +69,9 @@ export default {
   "strategy.title": "Turning Research Into Creator-Ready Strategy",
   "strategy.body": "The research was translated into messages, hooks, CTAs, and tone guidelines that creators could actually use while filming.",
   "strategy.cards": "PDRN Cream~Strengthened anti-aging benefit messaging with clinical credibility|PDRN Lip Serum~Clarified product value through lip-line care, volume, and daily routine context|Clinical Messaging~Connected ingredient evidence with visible benefit explanations|Tone & Manner~Adjusted language to feel credible, grounded, and natural for UK consumers",
+  "strategy.products": "PDRN Cream~Anti-aging~Anti-aging~Clinical~Before After|PDRN Lip Serum~Lip Volume~Lip Volume~Hydration~Clinical",
+  "strategy.imageCaption": "Product Photo Slot",
+  "strategy.talkingPoint": "Talking Point",
 
   "deliverables.label": "Strategic Deliverables",
   "deliverables.title": "Product Content Guidelines & UK Marketing Support",

@@ -66,7 +66,7 @@ export default {
 
   "work.drRejuall.title": "NeoSimplix",
   "work.drRejuall.org": "Dr. Rejuall",
-  "work.drRejuall.period": "June 2026 – Present",
+  "work.drRejuall.period": "May 2026 – Present",
   "work.drRejuall.desc": "Built Dr. Rejuall's UK growth strategy through market research, competitor analysis, consumer insight, influencer operations, content guidelines, and KPI analysis.",
   "work.drRejuall.tags": "UK Market Research,Influencer Marketing,KPI Analysis",
   "work.drRejuall.category": "Beauty / Global Marketing",

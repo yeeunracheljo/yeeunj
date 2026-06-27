@@ -66,7 +66,7 @@ export default {
 
   "work.drRejuall.title": "네오심플릭스",
   "work.drRejuall.org": "닥터리쥬올",
-  "work.drRejuall.period": "June 2026 – Present",
+  "work.drRejuall.period": "May 2026 – Present",
   "work.drRejuall.desc": "닥터리쥬올의 영국 시장 성장을 위해 시장 조사, 경쟁사 분석, 소비자 인사이트, 인플루언서 운영, 콘텐츠 가이드라인, KPI 분석을 수행했습니다.",
   "work.drRejuall.tags": "영국 시장 리서치,인플루언서 마케팅,KPI 분석",
   "work.drRejuall.category": "뷰티 / 글로벌 마케팅",

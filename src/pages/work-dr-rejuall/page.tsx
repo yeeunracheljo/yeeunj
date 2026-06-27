@@ -12,6 +12,27 @@ const otherProjects = [
   { title: "UTKCC", path: "/work/utkcc" },
 ];
 
+function ImageSlot({ label, caption, dark = false }: { label: string; caption: string; dark?: boolean }) {
+  return (
+    <div
+      className={`relative min-h-56 rounded-2xl border border-dashed flex flex-col items-center justify-center text-center p-6 overflow-hidden ${
+        dark
+          ? "border-white/25 bg-white/10 text-white"
+          : "border-[#D9B9A8] bg-[#F9F5F1] text-[#2F2A27]"
+      }`}
+    >
+      <div className={`absolute inset-0 ${dark ? "bg-white/[0.03]" : "bg-white/35"}`} />
+      <div className="relative">
+        <i className={`ri-image-add-line text-3xl mb-4 block ${dark ? "text-[#D9B9A8]" : "text-[#B88B78]"}`} />
+        <p className="font-serif text-2xl leading-tight">{label}</p>
+        <p className={`mt-2 text-xs uppercase tracking-[0.22em] ${dark ? "text-white/55" : "text-[#8A7A72]"}`}>
+          {caption}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function WorkDrRejuall() {
   const { t } = useTranslation("workDrRejuall");
   const { t: tc } = useTranslation("common");
@@ -32,6 +53,11 @@ export default function WorkDrRejuall() {
     const [title, body, icon] = item.split("~");
     return { title, body, icon };
   });
+  const projectProducts = split("project.products").map((item) => {
+    const [label, caption] = item.split("~");
+    return { label, caption };
+  });
+  const projectRoles = split("project.roles");
   const kpiItems = split("performance.kpis").map((item) => {
     const [metric, result, percent] = item.split("~");
     return { metric, result, percent: Number(percent) || 0 };
@@ -50,6 +76,10 @@ export default function WorkDrRejuall() {
     const [brand, message, response, action] = item.split("~");
     return { brand, message, response, action };
   });
+  const researchBrands = split("research.brands").map((item) => {
+    const [brand, caption, tag1, tag2] = item.split("~");
+    return { brand, caption, tag1, tag2 };
+  });
   const insightCards = split("insights.cards").map((item) => {
     const [title, score, body] = item.split("~");
     return { title, score, body };
@@ -59,6 +89,10 @@ export default function WorkDrRejuall() {
     return { label, value, note };
   });
   const strategyCards = parsePairs("strategy.cards");
+  const strategyProducts = split("strategy.products").map((item) => {
+    const [product, point, tag1, tag2, tag3] = item.split("~");
+    return { product, point, tags: [tag1, tag2, tag3].filter(Boolean) };
+  });
   const deliverables = parsePairs("deliverables.items");
   const reflectionItems = parsePairs("reflection.items");
 
@@ -131,21 +165,59 @@ export default function WorkDrRejuall() {
       </nav>
 
       <main>
-        <section className="relative min-h-screen bg-[#F9F5F1] flex flex-col items-center justify-center px-4 pt-20 pb-8">
-          <div className="text-center max-w-5xl mx-auto">
-            <p className="text-xs md:text-sm uppercase tracking-[0.34em] text-[#B88B78] mb-7">
-              {t("project.eyebrow")}
-            </p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2F2A27] leading-tight mb-7">
-              {t("project.title")}
-            </h1>
-            <p className="text-base md:text-xl text-[#B88B78] font-sans mb-12 max-w-4xl mx-auto font-semibold uppercase tracking-wide leading-relaxed">
-              {t("project.subtitle")}
-            </p>
-            <div className="flex flex-col items-center gap-2 text-[#6F625B] text-sm md:text-base">
-              <p>{t("project.institution")}</p>
-              <p className="text-[#D9B9A8]">|</p>
-              <p>{t("project.period")}</p>
+        <section className="relative min-h-screen bg-[#F9F5F1] flex flex-col justify-center px-4 pt-24 pb-16">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.88fr_1.12fr] gap-10 items-center">
+            <div className="text-center lg:text-left">
+              <p className="text-xs md:text-sm uppercase tracking-[0.34em] text-[#B88B78] mb-7">
+                {t("project.eyebrow")}
+              </p>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2F2A27] leading-tight mb-7">
+                {t("project.title")}
+              </h1>
+              <p className="text-base md:text-xl text-[#B88B78] font-sans mb-10 max-w-4xl mx-auto lg:mx-0 font-semibold uppercase tracking-wide leading-relaxed">
+                {t("project.subtitle")}
+              </p>
+              <div className="flex flex-col lg:items-start items-center gap-2 text-[#6F625B] text-sm md:text-base">
+                <p>{t("project.institution")}</p>
+                <p className="text-[#D9B9A8]">|</p>
+                <p>{t("project.period")}</p>
+              </div>
+            </div>
+
+            <div className="bg-white/75 border border-[#EFE5DD] rounded-3xl p-5 md:p-6 shadow-sm">
+              <div className="mb-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-2">{t("project.caseLabel")}</p>
+                <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] leading-tight">{t("project.caseTitle")}</h2>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#6F625B]">
+                    Dr. Rejuall
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#6F625B]">
+                    NeoSimplix
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                {projectProducts.map((product) => (
+                  <ImageSlot key={product.label} label={product.label} caption={product.caption} />
+                ))}
+              </div>
+
+              <div className="rounded-2xl bg-[#2F2A27] p-5 text-white">
+                <div className="flex items-center gap-2 mb-4">
+                  <i className="ri-briefcase-4-line text-[#D9B9A8]" />
+                  <p className="text-sm font-semibold">{t("project.roleTitle")}</p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {projectRoles.map((role) => (
+                    <p key={role} className="text-sm text-white/75 flex items-center gap-2">
+                      <i className="ri-check-line text-[#D9B9A8]" />
+                      <span>{role}</span>
+                    </p>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -346,6 +418,27 @@ export default function WorkDrRejuall() {
               </article>
             </div>
 
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+              {researchBrands.map((brand, index) => (
+                <article key={brand.brand} className="relative bg-white rounded-2xl border border-[#EFE5DD] p-5">
+                  <ImageSlot label={brand.brand} caption={brand.caption} />
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
+                      {brand.tag1}
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
+                      {brand.tag2}
+                    </span>
+                  </div>
+                  {index !== researchBrands.length - 1 && (
+                    <div className="hidden md:flex absolute top-1/2 -right-3 z-10 w-6 h-6 rounded-full bg-[#2F2A27] text-white items-center justify-center">
+                      <i className="ri-arrow-right-line text-sm" />
+                    </div>
+                  )}
+                </article>
+              ))}
+            </div>
+
             <article className="bg-white rounded-2xl border border-[#EFE5DD] overflow-hidden">
               <div className="p-6 border-b border-[#EFE5DD]">
                 <h3 className="text-xl font-serif text-[#2F2A27]">{t("research.benchmarkTitle")}</h3>
@@ -420,7 +513,7 @@ export default function WorkDrRejuall() {
         <section id="strategy" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">06 {t("strategy.label")}</p>
-            <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start mb-10">
               <div>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] mb-5">{t("strategy.title")}</h2>
                 <p className="text-[#6F625B] leading-relaxed">{t("strategy.body")}</p>
@@ -433,6 +526,28 @@ export default function WorkDrRejuall() {
                   </article>
                 ))}
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {strategyProducts.map((product) => (
+                <article key={product.product} className="rounded-2xl bg-white border border-[#EFE5DD] p-5 md:p-6">
+                  <ImageSlot label={product.product} caption={t("strategy.imageCaption")} />
+                  <div className="flex justify-center py-4 text-[#D9B9A8]">
+                    <i className="ri-arrow-down-line text-xl" />
+                  </div>
+                  <div className="rounded-2xl bg-[#F9F5F1] border border-[#EFE5DD] p-5">
+                    <p className="text-xs uppercase tracking-[0.22em] text-[#B88B78] mb-2">{t("strategy.talkingPoint")}</p>
+                    <h3 className="font-serif text-2xl text-[#2F2A27] mb-4">{product.point}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {product.tags.map((tag) => (
+                        <span key={tag} className="px-3 py-1.5 rounded-full bg-white border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
