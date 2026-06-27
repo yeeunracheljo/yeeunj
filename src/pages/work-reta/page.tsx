@@ -18,7 +18,7 @@ const otherProjects = [
   { title: "Karrot Campus Sprint", path: "/work/karrot-campus-sprint" },
   { title: "Anua Consumer Behavior Report", path: "/work/anua-consumer-report" },
   { title: "LG Interbrand Top 100 Strategy", path: "/work/lg-interbrand-strategy" },
-  { title: "Dr. Rejuall", path: "/work/dr-rejuall" },
+  { title: "NeoSimplix", path: "/work/dr-rejuall" },
   { title: "Macs Learning Lab", path: "/work/macslearning" },
   { title: "UTKCC", path: "/work/utkcc" },
 ];

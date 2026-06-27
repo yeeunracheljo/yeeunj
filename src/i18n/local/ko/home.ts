@@ -64,11 +64,11 @@ export default {
   "work.anua.tags": "소비자 통찰,시장 진출,Z세대 전략",
   "work.anua.category": "퍼포먼스 마케팅",
 
-  "work.drRejuall.title": "닥터리쥬올",
-  "work.drRejuall.org": "글로벌 마케팅 인턴",
-  "work.drRejuall.period": "2026.05 – Present",
-  "work.drRejuall.desc": "약 5,000명의 인플루언서 데이터를 분석해 영국 스킨케어 콘텐츠·인플루언서 전략을 수립하고, 30건의 파트너십 구축, 메가 인플루언서 목표 300%, 3주 내 월간 콘텐츠 KPI 120%, 가이드 기반 콘텐츠 35건을 달성했습니다.",
-  "work.drRejuall.tags": "영국 시장 리서치,인플루언서 마케팅,KPI 관리",
+  "work.drRejuall.title": "네오심플릭스",
+  "work.drRejuall.org": "닥터리쥬올",
+  "work.drRejuall.period": "June 2026 – Present",
+  "work.drRejuall.desc": "닥터리쥬올의 영국 시장 성장을 위해 시장 조사, 경쟁사 분석, 소비자 인사이트, 인플루언서 운영, 콘텐츠 가이드라인, KPI 분석을 수행했습니다.",
+  "work.drRejuall.tags": "영국 시장 리서치,인플루언서 마케팅,KPI 분석",
   "work.drRejuall.category": "뷰티 / 글로벌 마케팅",
 
   "work.lg.title": "LG Interbrand Top 100 전략",
