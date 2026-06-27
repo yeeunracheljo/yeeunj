@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useCallback, useEffect, useState } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import drRejuallCover from "@/assets/dr-rejuall-cover.png";
 
 const otherProjects = [
   { title: "Karrot Campus Sprint", path: "/work/karrot-campus-sprint" },
@@ -16,7 +15,6 @@ const otherProjects = [
 export default function WorkDrRejuall() {
   const { t } = useTranslation("workDrRejuall");
   const { t: tc } = useTranslation("common");
-  const tags = t("project.tags").split(",");
   const roleItems = t("role.items").split("|");
   const approachItems = t("approach.items").split("|");
   const highlightItems = t("highlights.items").split("|");
@@ -111,39 +109,27 @@ export default function WorkDrRejuall() {
       </nav>
 
       <main>
-        <section className="pt-32 md:pt-40 pb-16 md:pb-24">
-          <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-[#B88B78] mb-5">
-                {t("hero.label")}
-              </p>
-              <h1 className="font-serif text-4xl md:text-6xl text-[#2F2A27] leading-tight mb-5">
-                {t("project.title")}
-              </h1>
-              <p className="text-lg md:text-xl text-[#6F625B] leading-relaxed mb-8">
-                {t("project.subtitle")}
-              </p>
-              <div className="flex items-center gap-3 flex-wrap text-sm text-[#8E695A]">
-                <span className="font-semibold uppercase tracking-wider">{t("project.institution")}</span>
-                <span className="text-[#D9B9A8]">|</span>
-                <span>{t("project.period")}</span>
-              </div>
-              <div className="flex flex-wrap gap-2 mt-6">
-                {tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1.5 rounded-md text-xs font-medium bg-white border border-[#E9CDC0] text-[#6F625B]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+        <section className="relative min-h-screen bg-[#F9F5F1] flex flex-col items-center justify-center px-4 pt-20 pb-8">
+          <div className="text-center max-w-5xl mx-auto">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2F2A27] leading-tight mb-7">
+              {t("project.title")}
+            </h1>
+            <p className="text-base md:text-xl text-[#B88B78] font-sans mb-12 max-w-4xl mx-auto font-semibold uppercase tracking-wide leading-relaxed">
+              {t("project.subtitle")}
+            </p>
+
+            <div className="flex flex-col items-center gap-2 text-[#6F625B] text-sm md:text-base">
+              <p>{t("project.institution")}</p>
+              <p className="text-[#D9B9A8]">|</p>
+              <p>{t("project.period")}</p>
             </div>
-            <img
-              src={drRejuallCover}
-              alt={t("project.title")}
-              className="w-full rounded-2xl shadow-xl border border-white object-cover aspect-[1.03/1]"
-            />
+          </div>
+
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-[#6F625B]">
+            <span className="text-[10px] tracking-widest uppercase font-medium">{tc("nav.scroll")}</span>
+            <div className="w-4 h-6 border border-[#D9B9A8] rounded-full flex justify-center pt-1.5">
+              <div className="w-0.5 h-1.5 bg-[#B88B78] rounded-full animate-bounce" />
+            </div>
           </div>
         </section>
 
