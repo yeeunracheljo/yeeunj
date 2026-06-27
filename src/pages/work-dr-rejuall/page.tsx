@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useCallback, useEffect, useState } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import medik8Image from "@/assets/dr-rejuall-medik8.png";
+import simpleImage from "@/assets/dr-rejuall-simple.png";
+import pdrnCreamImage from "@/assets/dr-rejuall-pdrn-cream.png";
+import lipSerumImage from "@/assets/dr-rejuall-lip-serum.png";
+import pdrnDuoImage from "@/assets/dr-rejuall-pdrn-duo.png";
 
 const otherProjects = [
   { title: "Karrot Campus Sprint", path: "/work/karrot-campus-sprint" },
@@ -12,23 +17,46 @@ const otherProjects = [
   { title: "UTKCC", path: "/work/utkcc" },
 ];
 
+const imageByLabel: Record<string, string> = {
+  Medik8: medik8Image,
+  Simple: simpleImage,
+  "Dr. Rejuall": pdrnDuoImage,
+  "PDRN Cream": pdrnCreamImage,
+  "PDRN Lip Serum": lipSerumImage,
+};
+
 function ImageSlot({ label, caption, dark = false }: { label: string; caption: string; dark?: boolean }) {
+  const image = imageByLabel[label];
+
   return (
     <div
-      className={`relative min-h-56 rounded-2xl border border-dashed flex flex-col items-center justify-center text-center p-6 overflow-hidden ${
+      className={`relative min-h-56 rounded-2xl border flex flex-col items-center justify-center text-center overflow-hidden ${
         dark
           ? "border-white/25 bg-white/10 text-white"
-          : "border-[#D9B9A8] bg-[#F9F5F1] text-[#2F2A27]"
+          : "border-[#EFE5DD] bg-[#F9F5F1] text-[#2F2A27]"
       }`}
     >
-      <div className={`absolute inset-0 ${dark ? "bg-white/[0.03]" : "bg-white/35"}`} />
-      <div className="relative">
-        <i className={`ri-image-add-line text-3xl mb-4 block ${dark ? "text-[#D9B9A8]" : "text-[#B88B78]"}`} />
-        <p className="font-serif text-2xl leading-tight">{label}</p>
-        <p className={`mt-2 text-xs uppercase tracking-[0.22em] ${dark ? "text-white/55" : "text-[#8A7A72]"}`}>
-          {caption}
-        </p>
-      </div>
+      {image ? (
+        <>
+          <img src={image} alt={label} className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2F2A27]/65 via-[#2F2A27]/12 to-transparent" />
+          <div className="relative mt-auto w-full p-5 text-left text-white">
+            <p className="font-serif text-2xl leading-tight">{label}</p>
+            <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/70">{caption}</p>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={`absolute inset-0 ${dark ? "bg-white/[0.03]" : "bg-white/35"}`} />
+          <div className="relative p-6">
+            <i className={`ri-image-add-line text-3xl mb-4 block ${dark ? "text-[#D9B9A8]" : "text-[#B88B78]"}`} />
+            <p className="font-serif text-2xl leading-tight">{label}</p>
+            <p className={`mt-2 text-xs uppercase tracking-[0.22em] ${dark ? "text-white/55" : "text-[#8A7A72]"}`}>
+              {caption}
+            </p>
+          </div>
+        </>
+      )}
     </div>
   );
 }
