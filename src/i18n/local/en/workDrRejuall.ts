@@ -5,11 +5,6 @@ export default {
   "project.institution": "NeoSimplix | Global Influencer Marketing Intern",
   "project.period": "May 2026 – Present",
   "project.tags": "UK Market Research,Influencer Marketing,KPI Management,Global Market Analysis",
-  "project.caseLabel": "K-Beauty Global Market Case",
-  "project.caseTitle": "UK Market Intelligence & Content Strategy",
-  "project.products": "PDRN Cream~Product Photo Slot|PDRN Lip Serum~Product Photo Slot",
-  "project.roleTitle": "Role",
-  "project.roles": "Market Research|Competitor Analysis|Consumer Insight|Content Strategy",
 
   "toc.overview": "Overview",
   "toc.performance": "Performance",

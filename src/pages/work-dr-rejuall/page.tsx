@@ -53,11 +53,6 @@ export default function WorkDrRejuall() {
     const [title, body, icon] = item.split("~");
     return { title, body, icon };
   });
-  const projectProducts = split("project.products").map((item) => {
-    const [label, caption] = item.split("~");
-    return { label, caption };
-  });
-  const projectRoles = split("project.roles");
   const kpiItems = split("performance.kpis").map((item) => {
     const [metric, result, percent] = item.split("~");
     return { metric, result, percent: Number(percent) || 0 };
@@ -165,59 +160,21 @@ export default function WorkDrRejuall() {
       </nav>
 
       <main>
-        <section className="relative min-h-screen bg-[#F9F5F1] flex flex-col justify-center px-4 pt-24 pb-16">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.88fr_1.12fr] gap-10 items-center">
-            <div className="text-center lg:text-left">
-              <p className="text-xs md:text-sm uppercase tracking-[0.34em] text-[#B88B78] mb-7">
-                {t("project.eyebrow")}
-              </p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2F2A27] leading-tight mb-7">
-                {t("project.title")}
-              </h1>
-              <p className="text-base md:text-xl text-[#B88B78] font-sans mb-10 max-w-4xl mx-auto lg:mx-0 font-semibold uppercase tracking-wide leading-relaxed">
-                {t("project.subtitle")}
-              </p>
-              <div className="flex flex-col lg:items-start items-center gap-2 text-[#6F625B] text-sm md:text-base">
-                <p>{t("project.institution")}</p>
-                <p className="text-[#D9B9A8]">|</p>
-                <p>{t("project.period")}</p>
-              </div>
-            </div>
-
-            <div className="bg-white/75 border border-[#EFE5DD] rounded-3xl p-5 md:p-6 shadow-sm">
-              <div className="mb-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-2">{t("project.caseLabel")}</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] leading-tight">{t("project.caseTitle")}</h2>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#6F625B]">
-                    Dr. Rejuall
-                  </span>
-                  <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#6F625B]">
-                    NeoSimplix
-                  </span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                {projectProducts.map((product) => (
-                  <ImageSlot key={product.label} label={product.label} caption={product.caption} />
-                ))}
-              </div>
-
-              <div className="rounded-2xl bg-[#2F2A27] p-5 text-white">
-                <div className="flex items-center gap-2 mb-4">
-                  <i className="ri-briefcase-4-line text-[#D9B9A8]" />
-                  <p className="text-sm font-semibold">{t("project.roleTitle")}</p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {projectRoles.map((role) => (
-                    <p key={role} className="text-sm text-white/75 flex items-center gap-2">
-                      <i className="ri-check-line text-[#D9B9A8]" />
-                      <span>{role}</span>
-                    </p>
-                  ))}
-                </div>
-              </div>
+        <section className="relative min-h-screen bg-[#F9F5F1] flex flex-col items-center justify-center px-4 pt-20 pb-8">
+          <div className="text-center max-w-5xl mx-auto">
+            <p className="text-xs md:text-sm uppercase tracking-[0.34em] text-[#B88B78] mb-7">
+              {t("project.eyebrow")}
+            </p>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2F2A27] leading-tight mb-7">
+              {t("project.title")}
+            </h1>
+            <p className="text-base md:text-xl text-[#B88B78] font-sans mb-12 max-w-4xl mx-auto font-semibold uppercase tracking-wide leading-relaxed">
+              {t("project.subtitle")}
+            </p>
+            <div className="flex flex-col items-center gap-2 text-[#6F625B] text-sm md:text-base">
+              <p>{t("project.institution")}</p>
+              <p className="text-[#D9B9A8]">|</p>
+              <p>{t("project.period")}</p>
             </div>
           </div>
 
