@@ -49,10 +49,6 @@ export default function WorkDrRejuall() {
     const [value, label, desc, icon] = item.split("~");
     return { value, label, desc, icon };
   });
-  const roleItems = split("overview.roles").map((item) => {
-    const [title, body, icon] = item.split("~");
-    return { title, body, icon };
-  });
   const kpiItems = split("performance.kpis").map((item) => {
     const [metric, result, percent] = item.split("~");
     return { metric, result, percent: Number(percent) || 0 };
@@ -62,14 +58,11 @@ export default function WorkDrRejuall() {
     return { value, label };
   });
   const achievements = split("performance.achievements");
+  const researchSources = split("research.sources");
   const workflowItems = split("research.workflow");
-  const factors = split("research.factors").map((item) => {
-    const [rank, title] = item.split("~");
-    return { rank, title };
-  });
   const benchmarkRows = split("research.benchmark").map((item) => {
-    const [brand, message, response, action] = item.split("~");
-    return { brand, message, response, action };
+    const [brand, message, observation] = item.split("~");
+    return { brand, message, observation };
   });
   const researchBrands = split("research.brands").map((item) => {
     const [brand, caption, tag1, tag2] = item.split("~");
@@ -88,7 +81,8 @@ export default function WorkDrRejuall() {
     const [product, point, tag1, tag2, tag3] = item.split("~");
     return { product, point, tags: [tag1, tag2, tag3].filter(Boolean) };
   });
-  const deliverables = parsePairs("deliverables.items");
+  const guidelineItems = split("strategy.guidelines");
+  const supportItems = split("strategy.support");
   const reflectionItems = parsePairs("reflection.items");
 
   const tocItems = [
@@ -98,7 +92,6 @@ export default function WorkDrRejuall() {
     { id: "research", label: t("toc.research") },
     { id: "insights", label: t("toc.insights") },
     { id: "strategy", label: t("toc.strategy") },
-    { id: "deliverables", label: t("toc.deliverables") },
     { id: "reflection", label: t("toc.reflection") },
   ];
 
@@ -234,17 +227,6 @@ export default function WorkDrRejuall() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {roleItems.map((item) => (
-                <article key={item.title} className="rounded-xl border border-[#EFE5DD] bg-white p-5 shadow-sm">
-                  <div className="w-9 h-9 rounded-full bg-[#B88B78]/12 flex items-center justify-center mb-4">
-                    <i className={`${item.icon} text-[#8E695A] text-lg`} />
-                  </div>
-                  <h3 className="text-sm font-semibold text-[#2F2A27] mb-2">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-[#6F625B]">{item.body}</p>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -342,15 +324,12 @@ export default function WorkDrRejuall() {
 
             <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 mb-8">
               <article className="bg-white rounded-2xl p-6 border border-[#EFE5DD]">
-                <h3 className="text-lg font-serif text-[#2F2A27] mb-5">{t("research.factorTitle")}</h3>
-                <div className="space-y-3">
-                  {factors.map((factor) => (
-                    <div key={factor.title} className="flex items-center gap-4 rounded-xl bg-[#F9F5F1] border border-[#EFE5DD] p-4">
-                      <span className="w-8 h-8 rounded-full bg-[#8E695A] text-white flex items-center justify-center text-sm font-semibold">
-                        {factor.rank}
-                      </span>
-                      <span className="text-sm font-semibold text-[#2F2A27]">{factor.title}</span>
-                    </div>
+                <h3 className="text-lg font-serif text-[#2F2A27] mb-5">{t("research.sourceTitle")}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {researchSources.map((source) => (
+                    <span key={source} className="px-3 py-2 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#6F625B]">
+                      {source}
+                    </span>
                   ))}
                 </div>
               </article>
@@ -407,8 +386,7 @@ export default function WorkDrRejuall() {
                     <tr>
                       <th className="text-left font-semibold p-4">{t("research.tableBrand")}</th>
                       <th className="text-left font-semibold p-4">{t("research.tableMessage")}</th>
-                      <th className="text-left font-semibold p-4">{t("research.tableResponse")}</th>
-                      <th className="text-left font-semibold p-4">{t("research.tableAction")}</th>
+                      <th className="text-left font-semibold p-4">{t("research.tableObservation")}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -416,8 +394,7 @@ export default function WorkDrRejuall() {
                       <tr key={row.brand} className={index !== benchmarkRows.length - 1 ? "border-b border-[#EFE5DD]" : ""}>
                         <td className="p-4 font-semibold text-[#2F2A27]">{row.brand}</td>
                         <td className="p-4 text-[#6F625B]">{row.message}</td>
-                        <td className="p-4 text-[#6F625B]">{row.response}</td>
-                        <td className="p-4 text-[#8E695A] font-semibold">{row.action}</td>
+                        <td className="p-4 text-[#6F625B]">{row.observation}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -506,27 +483,37 @@ export default function WorkDrRejuall() {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
 
-        <section id="deliverables" className="py-16 md:py-24 bg-white scroll-mt-28">
-          <div className="max-w-6xl mx-auto px-6">
-            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">07 {t("deliverables.label")}</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] mb-10">{t("deliverables.title")}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {deliverables.map((item) => (
-                <article key={item.title} className="rounded-xl bg-[#F9F5F1] border border-[#EFE5DD] p-5">
-                  <h3 className="text-base font-semibold text-[#2F2A27] mb-3">{item.title}</h3>
-                  <p className="text-sm text-[#6F625B] leading-relaxed">{item.body}</p>
-                </article>
-              ))}
+            <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <article className="rounded-2xl bg-white border border-[#EFE5DD] p-6">
+                <h3 className="font-serif text-2xl text-[#2F2A27] mb-3">{t("strategy.guidelineTitle")}</h3>
+                <p className="text-sm text-[#6F625B] leading-relaxed mb-5">{t("strategy.guidelineBody")}</p>
+                <div className="flex flex-wrap gap-2">
+                  {guidelineItems.map((item) => (
+                    <span key={item} className="px-3 py-2 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
+              <article className="rounded-2xl bg-[#2F2A27] p-6 text-white">
+                <h3 className="font-serif text-2xl mb-5">{t("strategy.supportTitle")}</h3>
+                <div className="space-y-3">
+                  {supportItems.map((item) => (
+                    <p key={item} className="text-sm text-white/75 leading-relaxed flex gap-2">
+                      <i className="ri-check-line text-[#D9B9A8] mt-0.5" />
+                      <span>{item}</span>
+                    </p>
+                  ))}
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
         <section id="reflection" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">08 {t("reflection.label")}</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">07 {t("reflection.label")}</p>
             <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] mb-10">{t("reflection.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {reflectionItems.map((item) => (
