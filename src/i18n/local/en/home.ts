@@ -64,7 +64,7 @@ export default {
   "work.anua.tags": "Consumer Insights,Market Entry,Gen Z Strategy",
   "work.anua.category": "Performance Marketing",
 
-  "work.drRejuall.title": "NEOSIMPLIX (Dr. Rejuall)",
+  "work.drRejuall.title": "Dr. Rejuall",
   "work.drRejuall.org": "Global Marketing Intern",
   "work.drRejuall.period": "2026.05 – Present",
   "work.drRejuall.desc": "Built UK skincare content and influencer strategy by analyzing 5,000 influencer profiles, establishing 30 partnerships, exceeding the mega influencer goal by 300%, reaching 120% of the monthly content KPI within 3 weeks, and guiding 35 content pieces.",

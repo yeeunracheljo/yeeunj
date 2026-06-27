@@ -16,7 +16,7 @@ import { useTranslation } from "react-i18next";
 const otherProjects = [
   { title: "Anua Consumer Behavior Report", path: "/work/anua-consumer-report" },
   { title: "LG Interbrand Top 100 Strategy", path: "/work/lg-interbrand-strategy" },
-  { title: "NEOSIMPLIX (Dr. Rejuall)", path: "/work/dr-rejuall" },
+  { title: "Dr. Rejuall", path: "/work/dr-rejuall" },
   { title: "Reta", path: "/work/reta" },
   { title: "Macs Learning Lab", path: "/work/macslearning" },
   { title: "UTKCC", path: "/work/utkcc" },
