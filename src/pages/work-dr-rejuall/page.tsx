@@ -20,8 +20,8 @@ const otherProjects = [
 const imageByLabel: Record<string, string> = {
   Medik8: medik8Image,
   Simple: simpleImage,
-  "Dr. Rejuall": pdrnDuoImage,
-  "PDRN Cream": pdrnCreamImage,
+  "Dr. Rejuall": pdrnCreamImage,
+  "PDRN Cream": pdrnDuoImage,
   "PDRN Lip Serum": lipSerumImage,
 };
 
@@ -30,7 +30,7 @@ function ImageSlot({ label, caption, dark = false }: { label: string; caption: s
 
   return (
     <div
-      className={`relative min-h-56 rounded-2xl border flex flex-col items-center justify-center text-center overflow-hidden ${
+      className={`relative rounded-2xl border flex flex-col items-center justify-center text-center overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
         dark
           ? "border-white/25 bg-white/10 text-white"
           : "border-[#EFE5DD] bg-[#F9F5F1] text-[#2F2A27]"
@@ -38,9 +38,10 @@ function ImageSlot({ label, caption, dark = false }: { label: string; caption: s
     >
       {image ? (
         <>
-          <img src={image} alt={label} className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2F2A27]/65 via-[#2F2A27]/12 to-transparent" />
-          <div className="relative mt-auto w-full p-5 text-left text-white">
+          <div className="w-full bg-white">
+            <img src={image} alt={label} className="w-full h-auto block" />
+          </div>
+          <div className="w-full p-5 text-left bg-[#2F2A27] text-white">
             <p className="font-serif text-2xl leading-tight">{label}</p>
             <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/70">{caption}</p>
           </div>
@@ -245,7 +246,7 @@ export default function WorkDrRejuall() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {overviewMetrics.map((metric) => (
-                  <article key={metric.label} className="rounded-xl border border-[#EFE5DD] bg-[#F9F5F1] p-5">
+                  <article key={metric.label} className="rounded-xl border border-[#EFE5DD] bg-[#F9F5F1] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <i className={`${metric.icon} text-[#B88B78] text-xl mb-5 block`} />
                     <p className="text-3xl font-serif text-[#2F2A27] mb-1">{metric.value}</p>
                     <p className="text-sm font-semibold text-[#2F2A27]">{metric.label}</p>
@@ -438,10 +439,15 @@ export default function WorkDrRejuall() {
             <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] mb-10">{t("insights.title")}</h2>
             <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-8">
               <div className="space-y-4">
-                {insightCards.map((card) => (
-                  <article key={card.title} className="rounded-xl border border-[#EFE5DD] bg-[#F9F5F1] p-5">
+                {insightCards.map((card, index) => (
+                  <article key={card.title} className="rounded-xl border border-[#EFE5DD] bg-[#F9F5F1] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <div className="flex items-center justify-between gap-4 mb-3">
-                      <h3 className="text-base font-semibold text-[#2F2A27]">{card.title}</h3>
+                      <div className="flex items-center gap-3">
+                        <span className="w-8 h-8 rounded-full bg-[#8E695A] text-white text-xs font-semibold flex items-center justify-center">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <h3 className="text-base font-semibold text-[#2F2A27]">{card.title}</h3>
+                      </div>
                       <span className="text-[#B88B78] tracking-[0.08em]">{card.score}</span>
                     </div>
                     <p className="text-sm text-[#6F625B] leading-relaxed">{card.body}</p>
@@ -544,9 +550,10 @@ export default function WorkDrRejuall() {
             <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">07 {t("reflection.label")}</p>
             <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] mb-10">{t("reflection.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {reflectionItems.map((item) => (
-                <article key={item.title} className="bg-white rounded-xl p-6 border border-[#EFE5DD]">
-                  <h3 className="text-base font-semibold text-[#2F2A27] mb-3">{item.title}</h3>
+                {reflectionItems.map((item, index) => (
+                <article key={item.title} className="bg-white rounded-xl p-6 border border-[#EFE5DD] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <span className="text-xs font-mono text-[#B88B78]">0{index + 1}</span>
+                  <h3 className="text-base font-semibold text-[#2F2A27] mt-3 mb-3">{item.title}</h3>
                   <p className="text-sm text-[#6F625B] leading-relaxed">{item.body}</p>
                 </article>
               ))}
