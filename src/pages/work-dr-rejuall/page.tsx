@@ -25,8 +25,19 @@ const imageByLabel: Record<string, string> = {
   "PDRN Lip Serum": lipSerumImage,
 };
 
-function ImageSlot({ label, caption, dark = false }: { label: string; caption: string; dark?: boolean }) {
+function ImageSlot({
+  label,
+  caption,
+  variant = "wide",
+  dark = false,
+}: {
+  label: string;
+  caption: string;
+  variant?: "wide" | "square";
+  dark?: boolean;
+}) {
   const image = imageByLabel[label];
+  const imageFrame = variant === "square" ? "aspect-square" : "aspect-video";
 
   return (
     <div
@@ -39,9 +50,11 @@ function ImageSlot({ label, caption, dark = false }: { label: string; caption: s
       {image ? (
         <>
           <div className="w-full bg-white">
-            <img src={image} alt={label} className="w-full h-auto block" />
+            <div className={`${imageFrame} w-full flex items-center justify-center`}>
+              <img src={image} alt={label} className="max-w-full max-h-full object-contain block" />
+            </div>
           </div>
-          <div className="w-full p-5 text-left bg-[#2F2A27] text-white">
+          <div className="w-full p-5 text-left bg-[#8E695A] text-white">
             <p className="font-serif text-2xl leading-tight">{label}</p>
             <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/70">{caption}</p>
           </div>
@@ -184,9 +197,6 @@ export default function WorkDrRejuall() {
       <main>
         <section className="relative min-h-screen bg-[#F9F5F1] flex flex-col items-center justify-center px-4 pt-20 pb-8">
           <div className="text-center max-w-5xl mx-auto">
-            <p className="text-xs md:text-sm uppercase tracking-[0.34em] text-[#B88B78] mb-7">
-              {t("project.eyebrow")}
-            </p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2F2A27] leading-tight mb-7">
               {t("project.title")}
             </h1>
@@ -308,7 +318,7 @@ export default function WorkDrRejuall() {
                   })}
                 </div>
 
-                <div className="mt-8 rounded-xl bg-[#2F2A27] p-5 text-white">
+                <div className="mt-8 rounded-xl bg-[#8E695A] p-5 text-white">
                   <p className="text-sm font-semibold mb-3">{t("performance.achievementTitle")}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {achievements.map((item) => (
@@ -386,7 +396,7 @@ export default function WorkDrRejuall() {
             <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-5">
               {researchBrands.map((brand, index) => (
                 <article key={brand.brand} className="relative bg-white rounded-2xl border border-[#EFE5DD] p-5">
-                  <ImageSlot label={brand.brand} caption={brand.caption} />
+                  <ImageSlot label={brand.brand} caption={brand.caption} variant="wide" />
                   <div className="mt-4 flex flex-wrap gap-2">
                     <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
                       {brand.tag1}
@@ -396,7 +406,7 @@ export default function WorkDrRejuall() {
                     </span>
                   </div>
                   {index !== researchBrands.length - 1 && (
-                    <div className="hidden md:flex absolute top-1/2 -right-3 z-10 w-6 h-6 rounded-full bg-[#2F2A27] text-white items-center justify-center">
+                    <div className="hidden md:flex absolute top-1/2 -right-3 z-10 w-6 h-6 rounded-full bg-[#8E695A] text-white items-center justify-center">
                       <i className="ri-arrow-right-line text-sm" />
                     </div>
                   )}
@@ -455,7 +465,7 @@ export default function WorkDrRejuall() {
                 ))}
               </div>
 
-              <article className="rounded-2xl border border-[#EFE5DD] bg-[#2F2A27] p-6 md:p-8 text-white">
+              <article className="rounded-2xl border border-[#EFE5DD] bg-[#8E695A] p-6 md:p-8 text-white">
                 <h3 className="font-serif text-2xl mb-7">{t("insights.beforeAfterTitle")}</h3>
                 <div className="space-y-4">
                   {beforeAfter.map((item, index) => (
@@ -499,7 +509,7 @@ export default function WorkDrRejuall() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {strategyProducts.map((product) => (
                 <article key={product.product} className="rounded-2xl bg-white border border-[#EFE5DD] p-5 md:p-6">
-                  <ImageSlot label={product.product} caption={t("strategy.imageCaption")} />
+                  <ImageSlot label={product.product} caption={t("strategy.imageCaption")} variant="square" />
                   <div className="flex justify-center py-4 text-[#D9B9A8]">
                     <i className="ri-arrow-down-line text-xl" />
                   </div>
@@ -530,7 +540,7 @@ export default function WorkDrRejuall() {
                   ))}
                 </div>
               </article>
-              <article className="rounded-2xl bg-[#2F2A27] p-6 text-white">
+              <article className="rounded-2xl bg-[#8E695A] p-6 text-white">
                 <h3 className="font-serif text-2xl mb-5">{t("strategy.supportTitle")}</h3>
                 <div className="space-y-3">
                   {supportItems.map((item) => (
@@ -545,23 +555,23 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section id="reflection" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
-          <div className="max-w-6xl mx-auto px-6">
+        <section id="reflection" className="py-20 md:py-28 bg-white scroll-mt-28">
+          <div className="max-w-6xl mx-auto px-6 text-center">
             <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">07 {t("reflection.label")}</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-[#2F2A27] mb-10">{t("reflection.title")}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                {reflectionItems.map((item, index) => (
-                <article key={item.title} className="bg-white rounded-xl p-6 border border-[#EFE5DD] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <span className="text-xs font-mono text-[#B88B78]">0{index + 1}</span>
-                  <h3 className="text-base font-semibold text-[#2F2A27] mt-3 mb-3">{item.title}</h3>
-                  <p className="text-sm text-[#6F625B] leading-relaxed">{item.body}</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-[#2F2A27] mb-16">{t("reflection.title")}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {reflectionItems.map((item, index) => (
+                <article key={item.title} className="bg-[#F8EFE9] rounded-2xl p-8 md:p-10 border border-[#EFE5DD] min-h-72 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <span className="text-xl font-semibold text-[#B88B78]">0{index + 1}</span>
+                  <h3 className="text-xl font-semibold text-[#2F2A27] mt-8 mb-5">{item.title}</h3>
+                  <p className="text-base text-[#6F625B] leading-relaxed">{item.body}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-20 md:py-28 bg-[#2F2A27]">
+        <section className="py-20 md:py-28 bg-[#8E695A]">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-serif text-white mb-10">{tc("nav.otherProjects")}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">

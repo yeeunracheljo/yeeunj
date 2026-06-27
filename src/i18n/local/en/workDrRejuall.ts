@@ -1,5 +1,4 @@
 export default {
-  "project.eyebrow": "NeoSimplix Global Marketing Internship",
   "project.title": "DR. REJUALL",
   "project.subtitle": "UK Market Intelligence & Content Strategy",
   "project.institution": "NeoSimplix | Global Influencer Marketing Intern",
