@@ -64,6 +64,7 @@ export default {
   "strategy.talkingPoint": "Talking Point",
   "strategy.guidelineTitle": "Content Guidelines",
   "strategy.guidelineBody": "Based on research findings, I produced content guidelines that creators could use immediately. 36 content guidelines have been completed and content is being uploaded sequentially through UK influencers.",
+  "strategy.guidelineComponents": "Guideline Components",
   "strategy.guidelines": "Core Message|Content Format|Hook|CTA|Clinical Messaging|Tone & Manner",
   "strategy.supportTitle": "UK Marketing Support",
   "strategy.support": "Created marketing communication materials for Boots promotion|Supported UK market content operations",

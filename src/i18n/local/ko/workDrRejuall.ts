@@ -64,6 +64,7 @@ export default {
   "strategy.talkingPoint": "Talking Point",
   "strategy.guidelineTitle": "Content Guidelines",
   "strategy.guidelineBody": "리서치 결과를 바탕으로 실제 크리에이터가 바로 활용할 수 있는 콘텐츠 가이드라인을 제작했습니다. 현재 36건의 콘텐츠 가이드라인이 제작되어 영국 인플루언서를 통해 순차적으로 콘텐츠가 업로드되고 있습니다.",
+  "strategy.guidelineComponents": "Guideline Components",
   "strategy.guidelines": "Core Message|Content Format|Hook|CTA|Clinical Messaging|Tone & Manner",
   "strategy.supportTitle": "UK Marketing Support",
   "strategy.support": "Boots 프로모션 관련 마케팅 커뮤니케이션 자료 제작|영국 시장 콘텐츠 운영 지원",
