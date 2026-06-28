@@ -58,14 +58,13 @@ export default {
 
   "strategy.label": "Strategy",
   "strategy.title": "Turning Research into Creator Strategy",
-  "strategy.body": "도출한 인사이트를 실제 크리에이터가 활용할 수 있는 콘텐츠 전략과 가이드라인으로 구체화했습니다.",
-  "strategy.cards": "PDRN Cream~Rejuvenating 중심 셀링 포인트 설정, Anti-aging 메시지 적용, Clinical 기반 신뢰도 강화, 성분보다 효용 중심 콘텐츠 방향 기획|PDRN Lip Serum~영국 소비자 반응 및 경쟁 브랜드 콘텐츠를 기반으로 콘텐츠 방향 리서치 진행, 제품별 콘텐츠 가이드라인 기획 진행 중",
-  "strategy.products": "PDRN Cream~Rejuvenating~Rejuvenating Selling Point~Anti-aging~Clinical|PDRN Lip Serum~Content Direction~Consumer Research~Product Experience~Guideline",
+  "strategy.body": "리서치 결과를 바탕으로 제품별 핵심 메시지와 콘텐츠 형식을 정의하고, 실제 크리에이터가 활용할 수 있는 콘텐츠 가이드라인으로 구체화했습니다.",
+  "strategy.products": "PDRN Cream~Core Message~Rejuvenating (Core Selling Point),Anti-aging,Clinical Credibility~Content Format~Talking-style Content,Benefit-focused Explanation,Creator-led Product Review|PDRN Lip Serum~Current Status~Consumer Research,Competitor Benchmark,Content Direction Development~Next Step~Content Guideline Development",
   "strategy.imageCaption": "Product Visual",
   "strategy.talkingPoint": "Talking Point",
   "strategy.guidelineTitle": "Content Guidelines",
-  "strategy.guidelineBody": "리서치 결과를 바탕으로 Talking Point, Hook, CTA, Clinical Messaging, Tone & Manner를 포함한 콘텐츠 가이드라인을 제작했습니다. 현재 36건의 콘텐츠 가이드라인이 제작되어 영국 인플루언서를 통해 순차적으로 콘텐츠가 업로드되고 있습니다.",
-  "strategy.guidelines": "Talking Point|Hook|CTA|Clinical Messaging|Tone & Manner",
+  "strategy.guidelineBody": "리서치 결과를 바탕으로 실제 크리에이터가 바로 활용할 수 있는 콘텐츠 가이드라인을 제작했습니다. 현재 36건의 콘텐츠 가이드라인이 제작되어 영국 인플루언서를 통해 순차적으로 콘텐츠가 업로드되고 있습니다.",
+  "strategy.guidelines": "Core Message|Content Format|Hook|CTA|Clinical Messaging|Tone & Manner",
   "strategy.supportTitle": "UK Marketing Support",
   "strategy.support": "Boots 프로모션 관련 마케팅 커뮤니케이션 자료 제작|영국 시장 콘텐츠 운영 지원",
 

@@ -123,10 +123,15 @@ export default function WorkDrRejuall() {
     const [label, value, note] = item.split("~");
     return { label, value, note };
   });
-  const strategyCards = parsePairs("strategy.cards");
   const strategyProducts = split("strategy.products").map((item) => {
-    const [product, point, tag1, tag2, tag3] = item.split("~");
-    return { product, point, tags: [tag1, tag2, tag3].filter(Boolean) };
+    const [product, firstTitle, firstItems, secondTitle, secondItems] = item.split("~");
+    return {
+      product,
+      sections: [
+        { title: firstTitle, items: firstItems.split(",").filter(Boolean) },
+        { title: secondTitle, items: secondItems.split(",").filter(Boolean) },
+      ],
+    };
   });
   const guidelineItems = split("strategy.guidelines");
   const supportItems = split("strategy.support");
@@ -496,38 +501,33 @@ export default function WorkDrRejuall() {
         <section id="strategy" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">06 {t("strategy.label")}</p>
-            <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start mb-10">
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-5">{t("strategy.title")}</h2>
-                <p className="text-[#6F625B] leading-relaxed">{t("strategy.body")}</p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {strategyCards.map((card) => (
-                  <article key={card.title} className="rounded-xl bg-white border border-[#EFE5DD] p-5">
-                    <h3 className="text-sm font-semibold text-[#3A210F] mb-2">{card.title}</h3>
-                    <p className="text-sm text-[#6F625B] leading-relaxed">{card.body}</p>
-                  </article>
-                ))}
-              </div>
+            <div className="max-w-3xl mb-10">
+              <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-5">{t("strategy.title")}</h2>
+              <p className="text-[#6F625B] leading-relaxed">{t("strategy.body")}</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {strategyProducts.map((product) => (
                 <article key={product.product} className="rounded-2xl bg-white border border-[#EFE5DD] p-5 md:p-6">
+                  <h3 className="font-serif text-2xl text-[#3A210F] text-center mb-5">{product.product}</h3>
                   <ImageSlot label={product.product} caption={t("strategy.imageCaption")} variant="square" compact />
                   <div className="flex justify-center py-4 text-[#D9B9A8]">
                     <i className="ri-arrow-down-line text-xl" />
                   </div>
-                  <div className="rounded-2xl bg-[#F9F5F1] border border-[#EFE5DD] p-5">
-                    <p className="text-xs uppercase tracking-[0.22em] text-[#B88B78] mb-2">{t("strategy.talkingPoint")}</p>
-                    <h3 className="font-serif text-2xl text-[#3A210F] mb-4">{product.point}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {product.tags.map((tag) => (
-                        <span key={tag} className="px-3 py-1.5 rounded-full bg-white border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {product.sections.map((section) => (
+                      <div key={section.title} className="rounded-2xl bg-[#F9F5F1] border border-[#EFE5DD] p-5">
+                        <p className="text-xs uppercase tracking-[0.22em] text-[#B88B78] mb-4">{section.title}</p>
+                        <div className="space-y-3">
+                          {section.items.map((item) => (
+                            <p key={item} className="text-sm text-[#6F625B] leading-relaxed flex gap-2">
+                              <i className="ri-check-line text-[#B88B78] mt-0.5" />
+                              <span>{item}</span>
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </article>
               ))}

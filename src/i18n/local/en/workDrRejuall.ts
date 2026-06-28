@@ -58,14 +58,13 @@ export default {
 
   "strategy.label": "Strategy",
   "strategy.title": "Turning Research into Creator Strategy",
-  "strategy.body": "I translated the insights into content strategy and guidelines that creators could directly use.",
-  "strategy.cards": "PDRN Cream~Set rejuvenating as the key selling point, applied anti-aging messaging, strengthened clinical credibility, and planned benefit-led content direction|PDRN Lip Serum~Researched content direction based on UK consumer responses and competitor content, with product-level content guidelines in progress",
-  "strategy.products": "PDRN Cream~Rejuvenating~Rejuvenating Selling Point~Anti-aging~Clinical|PDRN Lip Serum~Content Direction~Consumer Research~Product Experience~Guideline",
+  "strategy.body": "Based on research findings, I defined product-level core messages and content formats, then translated them into content guidelines creators could use directly.",
+  "strategy.products": "PDRN Cream~Core Message~Rejuvenating (Core Selling Point),Anti-aging,Clinical Credibility~Content Format~Talking-style Content,Benefit-focused Explanation,Creator-led Product Review|PDRN Lip Serum~Current Status~Consumer Research,Competitor Benchmark,Content Direction Development~Next Step~Content Guideline Development",
   "strategy.imageCaption": "Product Visual",
   "strategy.talkingPoint": "Talking Point",
   "strategy.guidelineTitle": "Content Guidelines",
-  "strategy.guidelineBody": "Based on research findings, I produced content guidelines including talking point, hook, CTA, clinical messaging, and tone and manner. 36 content guidelines have been completed and content is being uploaded sequentially through UK influencers.",
-  "strategy.guidelines": "Talking Point|Hook|CTA|Clinical Messaging|Tone & Manner",
+  "strategy.guidelineBody": "Based on research findings, I produced content guidelines that creators could use immediately. 36 content guidelines have been completed and content is being uploaded sequentially through UK influencers.",
+  "strategy.guidelines": "Core Message|Content Format|Hook|CTA|Clinical Messaging|Tone & Manner",
   "strategy.supportTitle": "UK Marketing Support",
   "strategy.support": "Created marketing communication materials for Boots promotion|Supported UK market content operations",
 
