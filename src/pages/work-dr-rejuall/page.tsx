@@ -352,9 +352,16 @@ export default function WorkDrRejuall() {
             <h2 className="font-serif text-3xl md:text-5xl text-[#3A210F] leading-tight mb-8">
               {t("challenge.title")}
             </h2>
-            <div className="max-w-3xl mx-auto space-y-5 text-[#6F625B] leading-relaxed">
-              <p>{t("challenge.body1")}</p>
-              <p>{t("challenge.body2")}</p>
+            <div className="max-w-3xl mx-auto rounded-3xl bg-[#F9F5F1] border border-[#EFE5DD] p-6 md:p-8 text-left shadow-sm">
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#3A210F] text-white flex items-center justify-center shrink-0">
+                  <i className="ri-question-line text-lg" />
+                </div>
+                <div className="space-y-5 text-[#6F625B] leading-relaxed">
+                  <p>{t("challenge.body1")}</p>
+                  <p>{t("challenge.body2")}</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
