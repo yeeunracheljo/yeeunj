@@ -131,7 +131,7 @@ export default function WorkSection() {
                   alt={project.title}
                   className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${
                     'imageFit' in project && project.imageFit === 'contain'
-                      ? 'object-contain bg-[#FAF9F6] p-10 md:p-12'
+                      ? 'object-contain bg-[#FAF9F6] p-4 md:p-6'
                       : 'object-cover'
                   }`}
                 />
