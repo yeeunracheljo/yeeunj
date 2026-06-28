@@ -19,10 +19,10 @@ export default {
   "performance.label": "Campaign Performance",
   "performance.title": "Initial Campaign Performance (First 2.5 Weeks)",
   "performance.chartTitle": "KPI",
-  "performance.chartSubtitle": "Overall and influencer tier achievement rate.",
+  "performance.chartSubtitle": "",
   "performance.kpis": "Overall KPI~111.48%~111.48|Mega~300%~300|Macro~150%~150|Mid~125.93%~125.93|Nano~80%~80",
-  "performance.stats": "30~Influencer Partnerships|84%~Budget Usage|2.5w~Campaign Period",
-  "performance.achievementTitle": "KPI Summary",
+  "performance.stats": "",
+  "performance.achievementTitle": "",
   "performance.achievements": "Selected targets from a global beauty influencer DB of approximately 5,000 profiles|Conducted outreach to approximately 400 influencers|Built partnerships with 30 UK influencers|Achieved 111.48% overall KPI in 2.5 weeks|Used 84% of the budget",
 
   "challenge.label": "Business Challenge",
@@ -32,7 +32,7 @@ export default {
 
   "research.label": "Market Research",
   "research.title": "Research Question",
-  "research.body": "I analyzed competitor content and consumer responses to define how PDRN products should be communicated to UK consumers.",
+  "research.body": "",
   "research.questionLabel": "Research Question",
   "research.question": "How should PDRN be communicated to UK consumers?",
   "research.sourceTitle": "Research Method",
@@ -49,7 +49,7 @@ export default {
 
   "insights.label": "Key Insights",
   "insights.title": "Key Insights",
-  "insights.cards": "Consumer Value~★★★★★~Competitor content and consumer response analysis showed a repeated pattern of content communicating product benefits around rejuvenating and connecting them to specific skin concerns such as under-eye wrinkles and hollow eye. This informed the core message and content direction for PDRN Cream.|Credibility~★★★★☆~Content combining clinical proof and ingredient explanation was used to strengthen brand credibility.|Ingredient Communication~★★★★☆~Content explaining the benefit an ingredient provides was more effective for helping consumers understand product value than ingredient-only communication.",
+  "insights.cards": "Consumer Value~~Competitor content and consumer response analysis showed a repeated pattern of content communicating product benefits around rejuvenating and connecting them to specific skin concerns such as under-eye wrinkles and hollow eye. This informed the core message and content direction for PDRN Cream.|Credibility~~Content combining clinical proof and ingredient explanation was used to strengthen brand credibility.|Ingredient Communication~~Content explaining the benefit an ingredient provides was more effective for helping consumers understand product value than ingredient-only communication.",
   "insights.beforeAfterTitle": "Research → Strategy",
   "insights.beforeAfter": "Research~Research~Competitor content and consumer response analysis|Consumer Insight~Consumer Insight~Identified benefit-led messaging consumers can understand|Core Message~Core Message~Refined the core message for PDRN Cream|Content Guideline~Content Guideline~Created creator-ready content guidelines|Creator Campaign~Creator Campaign~Sequential content upload through UK influencers",
 

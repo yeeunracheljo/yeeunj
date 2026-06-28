@@ -270,21 +270,25 @@ export default function WorkDrRejuall() {
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">02 {t("performance.label")}</p>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-4">{t("performance.title")}</h2>
-                <div className="grid grid-cols-3 gap-3">
-                  {performanceStats.map((stat) => (
-                    <div key={stat.label} className="rounded-xl bg-white border border-[#E8E0D8] p-4 text-center">
-                      <p className="text-xl font-serif text-[#3A210F]">{stat.value}</p>
-                      <p className="text-[11px] text-[#8A7A72] mt-1 leading-snug">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
+                {performanceStats.length > 0 && (
+                  <div className="grid grid-cols-3 gap-3">
+                    {performanceStats.map((stat) => (
+                      <div key={stat.label} className="rounded-xl bg-white border border-[#E8E0D8] p-4 text-center">
+                        <p className="text-xl font-serif text-[#3A210F]">{stat.value}</p>
+                        <p className="text-[11px] text-[#8A7A72] mt-1 leading-snug">{stat.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <article className="bg-white rounded-2xl p-6 md:p-8 border border-[#E8E0D8] shadow-sm">
                 <div className="flex items-start justify-between gap-4 mb-8">
                   <div>
                     <h3 className="text-xl font-serif text-[#3A210F]">{t("performance.chartTitle")}</h3>
-                    <p className="text-sm text-[#8A7A72] mt-1">{t("performance.chartSubtitle")}</p>
+                    {t("performance.chartSubtitle") && (
+                      <p className="text-sm text-[#8A7A72] mt-1">{t("performance.chartSubtitle")}</p>
+                    )}
                   </div>
                   <i className="ri-bar-chart-grouped-line text-[#3A210F] text-2xl" />
                 </div>
@@ -313,7 +317,9 @@ export default function WorkDrRejuall() {
                 </div>
 
                 <div className="mt-8 rounded-xl bg-[#3A210F] p-5 text-white">
-                  <p className="text-sm font-semibold mb-3">{t("performance.achievementTitle")}</p>
+                  {t("performance.achievementTitle") && (
+                    <p className="text-sm font-semibold mb-3">{t("performance.achievementTitle")}</p>
+                  )}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {achievements.map((item) => (
                       <p key={item} className="text-sm leading-relaxed text-white/75 flex gap-2">
@@ -353,7 +359,7 @@ export default function WorkDrRejuall() {
             <div className="text-center max-w-3xl mx-auto mb-10">
               <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">04 {t("research.label")}</p>
               <h2 className="font-serif text-3xl md:text-5xl text-[#3A210F] mb-5">{t("research.title")}</h2>
-              <p className="text-[#6F625B] leading-relaxed">{t("research.body")}</p>
+              {t("research.body") && <p className="text-[#6F625B] leading-relaxed">{t("research.body")}</p>}
             </div>
 
             <article className="max-w-3xl mx-auto rounded-3xl bg-white border border-[#E8E0D8] p-6 md:p-8 text-center shadow-sm mb-8">
@@ -464,7 +470,7 @@ export default function WorkDrRejuall() {
                     <span className="w-10 h-10 rounded-full bg-white border border-[#E8E0D8] text-[#3A210F] text-sm font-semibold flex items-center justify-center transition-colors duration-300 group-hover:bg-[#3A210F] group-hover:text-white">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="text-[#3A210F] text-sm tracking-[0.08em]">{card.score}</div>
+                    {card.score && <div className="text-[#3A210F] text-sm tracking-[0.08em]">{card.score}</div>}
                   </div>
                   <h3 className="text-lg font-semibold text-[#3A210F] mb-3">{card.title}</h3>
                   <p className="text-sm text-[#6F625B] leading-relaxed">{card.body}</p>
