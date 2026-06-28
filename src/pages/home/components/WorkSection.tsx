@@ -33,6 +33,7 @@ export default function WorkSection() {
       category: t('work.drRejuall.category'),
       path: "/work/dr-rejuall",
       imageUrl: drRejuallCover,
+      imageFit: 'contain',
     },
     {
       title: t('work.utkcc.title'),
@@ -128,9 +129,19 @@ export default function WorkSection() {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${
+                    'imageFit' in project && project.imageFit === 'contain'
+                      ? 'object-contain bg-[#FAF9F6] p-10 md:p-12'
+                      : 'object-cover'
+                  }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+                <div
+                  className={`absolute inset-0 ${
+                    'imageFit' in project && project.imageFit === 'contain'
+                      ? 'bg-gradient-to-t from-[#3A210F]/10 via-transparent to-transparent'
+                      : 'bg-gradient-to-t from-black/50 via-black/10 to-transparent'
+                  }`}
+                />
 
 
               </div>
