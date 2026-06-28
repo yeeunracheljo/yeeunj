@@ -16,8 +16,6 @@ export default {
   "overview.label": "Overview",
   "overview.title": "Clinical K-Pharmacy Skincare Brand Expanding Globally",
   "overview.body": "Dr. Rejuall은 국내 약국 약 5,000개에 입점한 임상 기반 더마 스킨케어 브랜드로, 영국 Boots를 포함한 글로벌 시장에서 제품을 판매하고 있습니다. 영국 인플루언서 마케팅을 담당하며 캠페인 운영과 성과 분석을 수행하는 동시에, 경쟁사 리서치와 소비자 반응 분석을 기반으로 제품별 콘텐츠 전략과 콘텐츠 가이드라인을 기획했습니다.",
-  "overview.metrics": "5,000~Influencer Database~글로벌 뷰티 인플루언서 DB 기반 타깃 선정~ri-database-2-line|400~Outreach~영국 인플루언서 아웃리치~ri-send-plane-line|30~Partnerships~영국 인플루언서 협업~ri-team-line|36~Content Guidelines~제품별 콘텐츠 가이드라인 제작~ri-file-list-3-line",
-
   "performance.label": "Campaign Performance",
   "performance.title": "Initial Campaign Performance",
   "performance.subtitle": "First 2.5 Weeks",

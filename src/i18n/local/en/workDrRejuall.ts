@@ -16,8 +16,6 @@ export default {
   "overview.label": "Overview",
   "overview.title": "Clinical K-Pharmacy Skincare Brand Expanding Globally",
   "overview.body": "Dr. Rejuall is a clinical derm skincare brand stocked in approximately 5,000 pharmacies in Korea and sold in global markets including Boots in the UK. I managed UK influencer marketing, campaign operations, and performance analysis while planning product-level content strategy and guidelines based on competitor research and consumer response analysis.",
-  "overview.metrics": "5,000~Influencer Database~Targeting based on global beauty influencer DB~ri-database-2-line|400~Outreach~UK influencer outreach~ri-send-plane-line|30~Partnerships~UK influencer collaborations~ri-team-line|36~Content Guidelines~Product-level content guidelines produced~ri-file-list-3-line",
-
   "performance.label": "Campaign Performance",
   "performance.title": "Initial Campaign Performance",
   "performance.subtitle": "First 2.5 Weeks",
