@@ -92,10 +92,6 @@ export default function WorkDrRejuall() {
       return { title, body };
     });
 
-  const overviewMetrics = split("overview.metrics").map((item) => {
-    const [value, label, desc, icon] = item.split("~");
-    return { value, label, desc, icon };
-  });
   const kpiItems = split("performance.kpis").map((item) => {
     const [metric, result, percent] = item.split("~");
     return { metric, result, percent: Number(percent) || 0 };
@@ -255,29 +251,14 @@ export default function WorkDrRejuall() {
         </div>
 
         <section id="overview" className="py-16 md:py-24 bg-white scroll-mt-28">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-8 md:gap-10 mb-12">
-              <div className="rounded-3xl bg-[#F9F5F1] border border-[#EFE5DD] p-7 md:p-8">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="rounded-3xl bg-[#F9F5F1] border border-[#EFE5DD] p-7 md:p-10 text-center">
                 <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">01 — {t("overview.label")}</p>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] leading-tight mb-6">
                   {t("overview.title")}
                 </h2>
                 <p className="text-[#6F625B] leading-relaxed">{t("overview.body")}</p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {overviewMetrics.map((metric) => (
-                  <article key={metric.label} className="rounded-2xl border border-[#EFE5DD] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div className="w-10 h-10 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] flex items-center justify-center mb-5">
-                      <i className={`${metric.icon} text-[#B88B78] text-lg block`} />
-                    </div>
-                    <p className="text-3xl font-serif text-[#3A210F] mb-1">{metric.value}</p>
-                    <p className="text-sm font-semibold text-[#3A210F]">{metric.label}</p>
-                    <p className="text-xs text-[#8A7A72] mt-2 leading-relaxed">{metric.desc}</p>
-                  </article>
-                ))}
-              </div>
             </div>
-
           </div>
         </section>
 
@@ -468,61 +449,53 @@ export default function WorkDrRejuall() {
               <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">05 — {t("insights.label")}</p>
               <h2 className="font-serif text-3xl md:text-5xl text-[#3A210F]">{t("insights.title")}</h2>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-[0.86fr_1.14fr] gap-7">
-              <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
                 {insightCards.map((card, index) => (
-                  <article key={card.title} className="rounded-2xl border border-[#EFE5DD] bg-[#FDF9F6] p-5 md:p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <div className="flex items-start justify-between gap-4 mb-4">
-                      <span className="w-9 h-9 rounded-full bg-white border border-[#EFE5DD] text-[#3A210F] text-xs font-semibold flex items-center justify-center">
+                <article key={card.title} className="group rounded-2xl border border-[#EFE5DD] bg-[#FDF9F6] p-6 md:p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-[#F9F5F1] hover:shadow-lg">
+                  <div className="flex flex-col items-center gap-3 mb-5">
+                    <span className="w-10 h-10 rounded-full bg-white border border-[#EFE5DD] text-[#3A210F] text-sm font-semibold flex items-center justify-center transition-colors duration-300 group-hover:bg-[#3A210F] group-hover:text-white">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div className="text-[#B88B78] text-sm tracking-[0.08em]">{card.score}</div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#3A210F] mb-3">{card.title}</h3>
+                  <p className="text-sm text-[#6F625B] leading-relaxed">{card.body}</p>
+                </article>
+              ))}
+            </div>
+
+            <article className="rounded-3xl border border-[#EFE5DD] bg-[#F9F5F1] p-6 md:p-8 shadow-sm">
+              <div className="text-center max-w-2xl mx-auto mb-8">
+                <p className="text-xs uppercase tracking-[0.22em] text-[#B88B78] mb-3">Workflow</p>
+                <h3 className="font-serif text-2xl md:text-3xl text-[#3A210F]">{t("insights.beforeAfterTitle")}</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                {beforeAfter.map((item, index) => (
+                  <div key={item.label} className="relative">
+                    <div className="h-full rounded-2xl bg-white border border-[#EFE5DD] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                      <span className="w-9 h-9 rounded-full bg-[#3A210F] text-white text-xs font-semibold flex items-center justify-center mx-auto mb-4">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className="px-3 py-1 rounded-full bg-white border border-[#EFE5DD] text-[#B88B78] text-xs tracking-[0.08em]">
-                        {card.score}
-                      </span>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[#B88B78] mb-3">{item.label}</p>
+                      <h4 className="font-serif text-lg text-[#3A210F] leading-snug">{item.value}</h4>
+                      <p className="text-xs text-[#8A7A72] leading-relaxed mt-3">{item.note}</p>
                     </div>
-                    <h3 className="text-lg font-semibold text-[#3A210F] mb-3">{card.title}</h3>
-                    <p className="text-sm text-[#6F625B] leading-relaxed">{card.body}</p>
-                  </article>
+                    {index !== beforeAfter.length - 1 && (
+                      <div className="hidden md:flex absolute top-1/2 -right-3 z-10 w-6 h-6 rounded-full bg-[#3A210F] text-white items-center justify-center">
+                        <i className="ri-arrow-right-line text-sm" />
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
-
-              <article className="rounded-3xl border border-[#EFE5DD] bg-[#3A210F] p-6 md:p-8 text-white shadow-sm">
-                <div className="flex items-center justify-between gap-4 mb-7">
-                  <h3 className="font-serif text-2xl md:text-3xl">{t("insights.beforeAfterTitle")}</h3>
-                  <span className="hidden sm:inline-flex px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] uppercase tracking-[0.18em] text-[#D9B9A8]">
-                    Workflow
-                  </span>
-                </div>
-                <div className="space-y-3">
-                  {beforeAfter.map((item, index) => (
-                    <div key={item.label}>
-                      <div className="rounded-2xl bg-white/[0.08] border border-white/15 p-4 md:p-5 flex gap-4">
-                        <span className="mt-0.5 w-8 h-8 rounded-full bg-white text-[#3A210F] text-xs font-semibold flex items-center justify-center shrink-0">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <div>
-                          <p className="text-xs uppercase tracking-[0.2em] text-[#D9B9A8] mb-2">{item.label}</p>
-                          <p className="text-xl font-serif text-white">{item.value}</p>
-                          <p className="text-sm text-white/65 mt-2">{item.note}</p>
-                        </div>
-                      </div>
-                      {index !== beforeAfter.length - 1 && (
-                        <div className="flex justify-center py-1.5 text-[#D9B9A8]">
-                          <i className="ri-arrow-down-line" />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </article>
-            </div>
+            </article>
           </div>
         </section>
 
         <section id="strategy" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">06 {t("strategy.label")}</p>
-            <div className="max-w-3xl mb-10">
+            <div className="max-w-3xl mx-auto mb-12 text-center">
+              <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">06 {t("strategy.label")}</p>
               <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-5">{t("strategy.title")}</h2>
               <p className="text-[#6F625B] leading-relaxed">{t("strategy.body")}</p>
             </div>
