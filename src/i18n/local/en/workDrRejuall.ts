@@ -18,7 +18,6 @@ export default {
   "overview.body": "Dr. Rejuall is a clinical derm skincare brand stocked in approximately 5,000 pharmacies in Korea and sold in global markets including Boots in the UK. I managed UK influencer marketing, campaign operations, and performance analysis while planning product-level content strategy and guidelines based on competitor research and consumer response analysis.",
   "performance.label": "Campaign Performance",
   "performance.title": "Initial Campaign Performance",
-  "performance.subtitle": "First 2.5 Weeks",
   "performance.chartTitle": "KPI",
   "performance.chartSubtitle": "Overall and influencer tier achievement rate.",
   "performance.kpis": "Overall KPI~111.48%~111.48|Mega~300%~300|Macro~150%~150|Mid~125.93%~125.93|Nano~80%~80",

@@ -49,7 +49,7 @@ function ImageSlot({
       } ${
         dark
           ? "border-white/25 bg-white/10 text-white"
-          : "border-[#EFE5DD] bg-[#F9F5F1] text-[#3A210F]"
+          : "border-[#E8E0D8] bg-[#FAF9F6] text-[#3A210F]"
       }`}
     >
       {image ? (
@@ -68,7 +68,7 @@ function ImageSlot({
         <>
           <div className={`absolute inset-0 ${dark ? "bg-white/[0.03]" : "bg-white/35"}`} />
           <div className="relative p-6">
-            <i className={`ri-image-add-line text-3xl mb-4 block ${dark ? "text-[#D9B9A8]" : "text-[#B88B78]"}`} />
+            <i className={`ri-image-add-line text-3xl mb-4 block ${dark ? "text-[#3A210F]" : "text-[#3A210F]"}`} />
             <p className="font-serif text-2xl leading-tight">{label}</p>
             <p className={`mt-2 text-xs uppercase tracking-[0.22em] ${dark ? "text-white/55" : "text-[#8A7A72]"}`}>
               {caption}
@@ -174,8 +174,8 @@ export default function WorkDrRejuall() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F9F5F1] text-[#3A210F]">
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between bg-[#F9F5F1]/95 backdrop-blur-sm shadow-sm">
+    <div className="min-h-screen bg-[#FAF9F6] text-[#3A210F]">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between bg-[#FAF9F6]/95 backdrop-blur-sm shadow-sm">
         <Link
           to="/"
           className="text-sm font-medium tracking-wide font-sans hover:opacity-70 transition-opacity text-[#3A210F]"
@@ -183,17 +183,17 @@ export default function WorkDrRejuall() {
           {tc("nav.portfolio")}
         </Link>
         <div className="hidden md:flex items-center gap-8">
-          <Link to="/" className="text-sm font-medium tracking-wide text-[#3A210F] hover:text-[#B88B78] transition-colors">
+          <Link to="/" className="text-sm font-medium tracking-wide text-[#3A210F] hover:text-[#3A210F] transition-colors">
             {tc("nav.home")}
           </Link>
           <span className="text-sm font-medium tracking-wide flex items-center gap-2 text-[#3A210F]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#B88B78] inline-block" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#3A210F] inline-block" />
             {tc("nav.work")}
           </span>
-          <Link to="/" className="text-sm font-medium tracking-wide text-[#3A210F] hover:text-[#B88B78] transition-colors">
+          <Link to="/" className="text-sm font-medium tracking-wide text-[#3A210F] hover:text-[#3A210F] transition-colors">
             {tc("nav.about")}
           </Link>
-          <Link to="/" className="text-sm font-medium tracking-wide text-[#3A210F] hover:text-[#B88B78] transition-colors">
+          <Link to="/" className="text-sm font-medium tracking-wide text-[#3A210F] hover:text-[#3A210F] transition-colors">
             {tc("nav.contact")}
           </Link>
           <LanguageSwitcher />
@@ -201,30 +201,30 @@ export default function WorkDrRejuall() {
       </nav>
 
       <main>
-        <section className="relative min-h-screen bg-[#F9F5F1] flex flex-col items-center justify-center px-4 pt-20 pb-8">
+        <section className="relative min-h-screen bg-[#FAF9F6] flex flex-col items-center justify-center px-4 pt-20 pb-8">
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#3A210F] leading-tight mb-7">
               {t("project.title")}
             </h1>
-            <p className="text-base md:text-xl text-[#B88B78] font-sans mb-12 max-w-4xl mx-auto font-semibold uppercase tracking-wide leading-relaxed">
+            <p className="text-base md:text-xl text-[#3A210F] font-sans mb-12 max-w-4xl mx-auto font-semibold uppercase tracking-wide leading-relaxed">
               {t("project.subtitle")}
             </p>
             <div className="flex flex-col items-center gap-2 text-[#6F625B] text-sm md:text-base">
               <p>{t("project.institution")}</p>
-              <p className="text-[#D9B9A8]">|</p>
+              <p className="text-[#3A210F]">|</p>
               <p>{t("project.period")}</p>
             </div>
           </div>
 
           <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-[#6F625B]">
             <span className="text-[10px] tracking-widest uppercase font-medium">{tc("nav.scroll")}</span>
-            <div className="w-4 h-6 border border-[#D9B9A8] rounded-full flex justify-center pt-1.5">
-              <div className="w-0.5 h-1.5 bg-[#B88B78] rounded-full animate-bounce" />
+            <div className="w-4 h-6 border border-[#3A210F] rounded-full flex justify-center pt-1.5">
+              <div className="w-0.5 h-1.5 bg-[#3A210F] rounded-full animate-bounce" />
             </div>
           </div>
         </section>
 
-        <div className="sticky top-[60px] z-40 bg-white/95 backdrop-blur-sm border-b border-[#EFE5DD]">
+        <div className="sticky top-[60px] z-40 bg-white/95 backdrop-blur-sm border-b border-[#E8E0D8]">
           <div className="mx-auto px-4 md:px-6">
             <nav className="flex items-center justify-center gap-1 overflow-x-auto py-2.5 no-scrollbar">
               {tocItems.map((item, index) => {
@@ -235,11 +235,11 @@ export default function WorkDrRejuall() {
                     onClick={() => scrollTo(item.id)}
                     className={`shrink-0 flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs md:text-sm font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? "bg-[#B88B78]/15 text-[#8E695A]"
-                        : "text-[#8A7A72]/70 hover:text-[#3A210F] hover:bg-[#F9F5F1]"
+                        ? "bg-[#3A210F]/15 text-[#3A210F]"
+                        : "text-[#8A7A72]/70 hover:text-[#3A210F] hover:bg-[#FAF9F6]"
                     }`}
                   >
-                    <span className={`text-[10px] font-mono ${isActive ? "text-[#8E695A]" : "text-[#D9B9A8]"}`}>
+                    <span className={`text-[10px] font-mono ${isActive ? "text-[#3A210F]" : "text-[#3A210F]"}`}>
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span>{item.label}</span>
@@ -252,8 +252,8 @@ export default function WorkDrRejuall() {
 
         <section id="overview" className="py-16 md:py-24 bg-white scroll-mt-28">
           <div className="max-w-4xl mx-auto px-6">
-            <div className="rounded-3xl bg-[#F9F5F1] border border-[#EFE5DD] p-7 md:p-10 text-center">
-                <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">01 — {t("overview.label")}</p>
+            <div className="rounded-3xl bg-[#FAF9F6] border border-[#E8E0D8] p-7 md:p-10 text-center">
+                <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">01 — {t("overview.label")}</p>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] leading-tight mb-6">
                   {t("overview.title")}
                 </h2>
@@ -262,30 +262,29 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section id="performance" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
+        <section id="performance" className="py-16 md:py-24 bg-[#FAF9F6] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start">
               <div>
-                <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">02 {t("performance.label")}</p>
+                <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">02 {t("performance.label")}</p>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-4">{t("performance.title")}</h2>
-                <p className="text-[#6F625B] leading-relaxed mb-6">{t("performance.subtitle")}</p>
                 <div className="grid grid-cols-3 gap-3">
                   {performanceStats.map((stat) => (
-                    <div key={stat.label} className="rounded-xl bg-white border border-[#EFE5DD] p-4 text-center">
-                      <p className="text-xl font-serif text-[#8E695A]">{stat.value}</p>
+                    <div key={stat.label} className="rounded-xl bg-white border border-[#E8E0D8] p-4 text-center">
+                      <p className="text-xl font-serif text-[#3A210F]">{stat.value}</p>
                       <p className="text-[11px] text-[#8A7A72] mt-1 leading-snug">{stat.label}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <article className="bg-white rounded-2xl p-6 md:p-8 border border-[#EFE5DD] shadow-sm">
+              <article className="bg-white rounded-2xl p-6 md:p-8 border border-[#E8E0D8] shadow-sm">
                 <div className="flex items-start justify-between gap-4 mb-8">
                   <div>
                     <h3 className="text-xl font-serif text-[#3A210F]">{t("performance.chartTitle")}</h3>
                     <p className="text-sm text-[#8A7A72] mt-1">{t("performance.chartSubtitle")}</p>
                   </div>
-                  <i className="ri-bar-chart-grouped-line text-[#B88B78] text-2xl" />
+                  <i className="ri-bar-chart-grouped-line text-[#3A210F] text-2xl" />
                 </div>
 
                 <div className="mb-4 grid grid-cols-5 text-[11px] text-[#8A7A72]">
@@ -302,10 +301,10 @@ export default function WorkDrRejuall() {
                     return (
                       <div key={item.metric} className="grid grid-cols-[86px_1fr_66px] md:grid-cols-[110px_1fr_78px] gap-3 items-center">
                         <p className="text-sm font-semibold text-[#3A210F]">{item.metric}</p>
-                        <div className="h-4 rounded-full bg-[#EFE5DD] overflow-hidden">
+                        <div className="h-4 rounded-full bg-[#E8E0D8] overflow-hidden">
                           <div className="h-full rounded-full bg-[#3A210F]" style={{ width: `${width}%` }} />
                         </div>
-                        <p className="text-sm font-semibold text-[#8E695A] text-right">{item.result}</p>
+                        <p className="text-sm font-semibold text-[#3A210F] text-right">{item.result}</p>
                       </div>
                     );
                   })}
@@ -316,7 +315,7 @@ export default function WorkDrRejuall() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {achievements.map((item) => (
                       <p key={item} className="text-sm leading-relaxed text-white/75 flex gap-2">
-                        <i className="ri-check-line text-[#D9B9A8] mt-0.5" />
+                        <i className="ri-check-line text-[#FAF9F6] mt-0.5" />
                         <span>{item}</span>
                       </p>
                     ))}
@@ -329,13 +328,13 @@ export default function WorkDrRejuall() {
 
         <section id="challenge" className="py-16 md:py-24 bg-white scroll-mt-28">
           <div className="max-w-5xl mx-auto px-6 text-center">
-            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">03 {t("challenge.label")}</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">03 {t("challenge.label")}</p>
             <h2 className="font-serif text-3xl md:text-5xl text-[#3A210F] leading-tight mb-8">
               {t("challenge.title")}
             </h2>
-            <div className="max-w-3xl mx-auto rounded-3xl bg-[#F9F5F1] border border-[#EFE5DD] p-6 md:p-8 text-left shadow-sm">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#3A210F] text-white flex items-center justify-center shrink-0">
+            <div className="max-w-3xl mx-auto rounded-3xl bg-[#FAF9F6] border border-[#E8E0D8] p-6 md:p-8 text-center shadow-sm">
+              <div className="flex flex-col items-center gap-5">
+                <div className="w-12 h-12 rounded-full bg-[#3A210F] text-white flex items-center justify-center shrink-0">
                   <i className="ri-question-line text-lg" />
                 </div>
                 <div className="space-y-5 text-[#6F625B] leading-relaxed">
@@ -347,46 +346,43 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section id="research" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
+        <section id="research" className="py-16 md:py-24 bg-[#FAF9F6] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">04 {t("research.label")}</p>
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-4">{t("research.title")}</h2>
-                <p className="text-[#6F625B] max-w-2xl leading-relaxed">{t("research.body")}</p>
-              </div>
-              <div className="rounded-xl bg-white border border-[#EFE5DD] p-5 max-w-md">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#B88B78] mb-2">{t("research.questionLabel")}</p>
-                <p className="font-serif text-xl text-[#3A210F] leading-snug">{t("research.question")}</p>
-              </div>
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">04 {t("research.label")}</p>
+              <h2 className="font-serif text-3xl md:text-5xl text-[#3A210F] mb-5">{t("research.title")}</h2>
+              <p className="text-[#6F625B] leading-relaxed">{t("research.body")}</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 mb-8">
-              <article className="bg-white rounded-2xl p-6 border border-[#EFE5DD]">
-                <h3 className="text-lg font-serif text-[#3A210F] mb-5">{t("research.sourceTitle")}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {researchSources.map((source) => (
-                    <span key={source} className="px-3 py-2 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#6F625B]">
-                      {source}
-                    </span>
+            <article className="max-w-3xl mx-auto rounded-3xl bg-white border border-[#E8E0D8] p-6 md:p-8 text-center shadow-sm mb-8">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#3A210F] mb-3">{t("research.questionLabel")}</p>
+              <p className="font-serif text-2xl md:text-3xl text-[#3A210F] leading-snug">{t("research.question")}</p>
+            </article>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+              <article className="bg-white rounded-3xl p-6 md:p-7 border border-[#E8E0D8]">
+                <h3 className="text-xl font-serif text-[#3A210F] mb-5 text-center">{t("research.sourceTitle")}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {researchSources.map((source, index) => (
+                    <div key={source} className="rounded-2xl bg-[#FAF9F6] border border-[#E8E0D8] p-4 text-center">
+                      <span className="text-xs font-semibold text-[#3A210F]">{String(index + 1).padStart(2, "0")}</span>
+                      <p className="text-sm font-semibold text-[#6F625B] mt-2 leading-snug">{source}</p>
+                    </div>
                   ))}
                 </div>
               </article>
 
-              <article className="bg-white rounded-2xl p-6 border border-[#EFE5DD]">
-                <h3 className="text-lg font-serif text-[#3A210F] mb-5">{t("research.workflowTitle")}</h3>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+              <article className="bg-white rounded-3xl p-6 md:p-7 border border-[#E8E0D8]">
+                <h3 className="text-xl font-serif text-[#3A210F] mb-5 text-center">{t("research.workflowTitle")}</h3>
+                <div className="space-y-3">
                   {workflowItems.map((item, index) => (
-                    <div key={item} className="flex flex-col sm:flex-row sm:items-center gap-2 flex-1">
-                      <div className="rounded-xl bg-[#F9F5F1] border border-[#EFE5DD] p-3 text-center min-h-16 flex items-center justify-center flex-1">
-                        <span className="text-xs font-semibold text-[#6F625B] leading-snug">{item}</span>
+                    <div key={item} className="flex items-center gap-3">
+                      <span className="w-9 h-9 rounded-full bg-[#3A210F] text-white text-xs font-semibold flex items-center justify-center shrink-0">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div className="flex-1 rounded-2xl bg-[#FAF9F6] border border-[#E8E0D8] px-4 py-3">
+                        <p className="text-sm font-semibold text-[#6F625B]">{item}</p>
                       </div>
-                      {index !== workflowItems.length - 1 && (
-                        <div className="flex justify-center text-[#D9B9A8] sm:w-4 sm:shrink-0">
-                          <i className="ri-arrow-down-line sm:hidden" />
-                          <i className="ri-arrow-right-line hidden sm:block" />
-                        </div>
-                      )}
                     </div>
                   ))}
                 </div>
@@ -395,13 +391,13 @@ export default function WorkDrRejuall() {
 
             <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-5">
               {researchBrands.map((brand, index) => (
-                <article key={brand.brand} className="relative bg-white rounded-2xl border border-[#EFE5DD] p-5">
+                <article key={brand.brand} className="relative bg-white rounded-3xl border border-[#E8E0D8] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <ImageSlot label={brand.brand} caption={brand.caption} variant="wide" />
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
+                  <div className="mt-4 flex justify-center flex-wrap gap-2">
+                    <span className="px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#E8E0D8] text-xs font-semibold text-[#3A210F]">
                       {brand.tag1}
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
+                    <span className="px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#E8E0D8] text-xs font-semibold text-[#3A210F]">
                       {brand.tag2}
                     </span>
                   </div>
@@ -414,14 +410,14 @@ export default function WorkDrRejuall() {
               ))}
             </div>
 
-            <article className="bg-white rounded-2xl border border-[#EFE5DD] overflow-hidden">
-              <div className="p-6 border-b border-[#EFE5DD]">
-                <h3 className="text-xl font-serif text-[#3A210F]">{t("research.benchmarkTitle")}</h3>
-                <p className="text-sm text-[#8A7A72] mt-2">{t("research.benchmarkSubtitle")}</p>
+            <article className="bg-white rounded-3xl border border-[#E8E0D8] overflow-hidden shadow-sm">
+              <div className="p-6 md:p-7 text-center border-b border-[#E8E0D8]">
+                <h3 className="text-2xl font-serif text-[#3A210F]">{t("research.benchmarkTitle")}</h3>
+                <p className="text-sm text-[#8A7A72] mt-2 max-w-2xl mx-auto">{t("research.benchmarkSubtitle")}</p>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[760px] text-sm">
-                  <thead className="bg-[#F9F5F1] text-[#8E695A]">
+                  <thead className="bg-[#FAF9F6] text-[#3A210F]">
                     <tr>
                       <th className="text-left font-semibold p-4">{t("research.tableBrand")}</th>
                       <th className="text-left font-semibold p-4">{t("research.tableMessage")}</th>
@@ -430,7 +426,7 @@ export default function WorkDrRejuall() {
                   </thead>
                   <tbody>
                     {benchmarkRows.map((row, index) => (
-                      <tr key={row.brand} className={index !== benchmarkRows.length - 1 ? "border-b border-[#EFE5DD]" : ""}>
+                      <tr key={row.brand} className={index !== benchmarkRows.length - 1 ? "border-b border-[#E8E0D8]" : ""}>
                         <td className="p-4 font-semibold text-[#3A210F]">{row.brand}</td>
                         <td className="p-4 text-[#6F625B]">{row.message}</td>
                         <td className="p-4 text-[#6F625B]">{row.observation}</td>
@@ -446,17 +442,17 @@ export default function WorkDrRejuall() {
         <section id="insights" className="py-16 md:py-24 bg-white scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">05 — {t("insights.label")}</p>
+              <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">05 — {t("insights.label")}</p>
               <h2 className="font-serif text-3xl md:text-5xl text-[#3A210F]">{t("insights.title")}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
                 {insightCards.map((card, index) => (
-                <article key={card.title} className="group rounded-2xl border border-[#EFE5DD] bg-[#FDF9F6] p-6 md:p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-[#F9F5F1] hover:shadow-lg">
+                <article key={card.title} className="group rounded-2xl border border-[#E8E0D8] bg-[#FAF9F6] p-6 md:p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-[#FAF9F6] hover:shadow-lg">
                   <div className="flex flex-col items-center gap-3 mb-5">
-                    <span className="w-10 h-10 rounded-full bg-white border border-[#EFE5DD] text-[#3A210F] text-sm font-semibold flex items-center justify-center transition-colors duration-300 group-hover:bg-[#3A210F] group-hover:text-white">
+                    <span className="w-10 h-10 rounded-full bg-white border border-[#E8E0D8] text-[#3A210F] text-sm font-semibold flex items-center justify-center transition-colors duration-300 group-hover:bg-[#3A210F] group-hover:text-white">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="text-[#B88B78] text-sm tracking-[0.08em]">{card.score}</div>
+                    <div className="text-[#3A210F] text-sm tracking-[0.08em]">{card.score}</div>
                   </div>
                   <h3 className="text-lg font-semibold text-[#3A210F] mb-3">{card.title}</h3>
                   <p className="text-sm text-[#6F625B] leading-relaxed">{card.body}</p>
@@ -464,19 +460,19 @@ export default function WorkDrRejuall() {
               ))}
             </div>
 
-            <article className="rounded-3xl border border-[#EFE5DD] bg-[#F9F5F1] p-6 md:p-8 shadow-sm">
+            <article className="rounded-3xl border border-[#E8E0D8] bg-[#FAF9F6] p-6 md:p-8 shadow-sm">
               <div className="text-center max-w-2xl mx-auto mb-8">
-                <p className="text-xs uppercase tracking-[0.22em] text-[#B88B78] mb-3">Workflow</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-[#3A210F] mb-3">Workflow</p>
                 <h3 className="font-serif text-2xl md:text-3xl text-[#3A210F]">{t("insights.beforeAfterTitle")}</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 {beforeAfter.map((item, index) => (
                   <div key={item.label} className="relative">
-                    <div className="h-full rounded-2xl bg-white border border-[#EFE5DD] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div className="h-full rounded-2xl bg-white border border-[#E8E0D8] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                       <span className="w-9 h-9 rounded-full bg-[#3A210F] text-white text-xs font-semibold flex items-center justify-center mx-auto mb-4">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <p className="text-xs uppercase tracking-[0.18em] text-[#B88B78] mb-3">{item.label}</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[#3A210F] mb-3">{item.label}</p>
                       <h4 className="font-serif text-lg text-[#3A210F] leading-snug">{item.value}</h4>
                       <p className="text-xs text-[#8A7A72] leading-relaxed mt-3">{item.note}</p>
                     </div>
@@ -492,30 +488,30 @@ export default function WorkDrRejuall() {
           </div>
         </section>
 
-        <section id="strategy" className="py-16 md:py-24 bg-[#F9F5F1] scroll-mt-28">
+        <section id="strategy" className="py-16 md:py-24 bg-[#FAF9F6] scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6">
             <div className="max-w-3xl mx-auto mb-12 text-center">
-              <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">06 {t("strategy.label")}</p>
+              <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">06 {t("strategy.label")}</p>
               <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-5">{t("strategy.title")}</h2>
               <p className="text-[#6F625B] leading-relaxed">{t("strategy.body")}</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {strategyProducts.map((product) => (
-                <article key={product.product} className="rounded-3xl bg-white border border-[#EFE5DD] p-5 md:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <article key={product.product} className="rounded-3xl bg-white border border-[#E8E0D8] p-5 md:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <h3 className="font-serif text-2xl text-[#3A210F] text-center mb-5">{product.product}</h3>
                   <ImageSlot label={product.product} caption={t("strategy.imageCaption")} variant="square" compact />
-                  <div className="flex justify-center py-4 text-[#D9B9A8]">
+                  <div className="flex justify-center py-4 text-[#3A210F]">
                     <i className="ri-arrow-down-line text-xl" />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {product.sections.map((section) => (
-                      <div key={section.title} className="rounded-2xl bg-[#F9F5F1] border border-[#EFE5DD] p-5">
-                        <p className="text-xs uppercase tracking-[0.22em] text-[#B88B78] mb-4">{section.title}</p>
+                      <div key={section.title} className="rounded-2xl bg-[#FAF9F6] border border-[#E8E0D8] p-5">
+                        <p className="text-xs uppercase tracking-[0.22em] text-[#3A210F] mb-4">{section.title}</p>
                         <div className="space-y-3">
                           {section.items.map((item) => (
                             <p key={item} className="text-sm text-[#6F625B] leading-relaxed flex gap-2">
-                              <i className="ri-check-line text-[#B88B78] mt-0.5" />
+                              <i className="ri-check-line text-[#3A210F] mt-0.5" />
                               <span>{item}</span>
                             </p>
                           ))}
@@ -528,13 +524,13 @@ export default function WorkDrRejuall() {
             </div>
 
             <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <article className="rounded-3xl bg-white border border-[#EFE5DD] p-6 md:p-7">
+              <article className="rounded-3xl bg-white border border-[#E8E0D8] p-6 md:p-7">
                 <h3 className="font-serif text-2xl text-[#3A210F] mb-3">{t("strategy.guidelineTitle")}</h3>
                 <p className="text-sm text-[#6F625B] leading-relaxed mb-5">{t("strategy.guidelineBody")}</p>
-                <p className="text-xs uppercase tracking-[0.22em] text-[#B88B78] mb-3">{t("strategy.guidelineComponents")}</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-[#3A210F] mb-3">{t("strategy.guidelineComponents")}</p>
                 <div className="flex flex-wrap gap-2">
                   {guidelineItems.map((item) => (
-                    <span key={item} className="px-3 py-2 rounded-full bg-[#F9F5F1] border border-[#EFE5DD] text-xs font-semibold text-[#8E695A]">
+                    <span key={item} className="px-3 py-2 rounded-full bg-[#FAF9F6] border border-[#E8E0D8] text-xs font-semibold text-[#3A210F]">
                       {item}
                     </span>
                   ))}
@@ -545,7 +541,7 @@ export default function WorkDrRejuall() {
                 <div className="space-y-3">
                   {supportItems.map((item) => (
                     <p key={item} className="text-sm text-white/75 leading-relaxed flex gap-2">
-                      <i className="ri-check-line text-[#D9B9A8] mt-0.5" />
+                      <i className="ri-check-line text-[#FAF9F6] mt-0.5" />
                       <span>{item}</span>
                     </p>
                   ))}
@@ -557,12 +553,12 @@ export default function WorkDrRejuall() {
 
         <section id="reflection" className="py-20 md:py-28 bg-white scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <p className="text-xs uppercase tracking-[0.24em] text-[#B88B78] mb-4">07 {t("reflection.label")}</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">07 {t("reflection.label")}</p>
             <h2 className="font-serif text-4xl md:text-5xl text-[#3A210F] mb-16">{t("reflection.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {reflectionItems.map((item, index) => (
-                <article key={item.title} className="bg-[#F8EFE9] rounded-2xl p-8 md:p-10 border border-[#EFE5DD] min-h-72 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <span className="text-xl font-semibold text-[#B88B78]">0{index + 1}</span>
+                <article key={item.title} className="bg-[#FAF9F6] rounded-2xl p-8 md:p-10 border border-[#E8E0D8] min-h-72 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <span className="text-xl font-semibold text-[#3A210F]">0{index + 1}</span>
                   <h3 className="text-xl font-semibold text-[#3A210F] mt-8 mb-5">{item.title}</h3>
                   <p className="text-base text-[#6F625B] leading-relaxed">{item.body}</p>
                 </article>

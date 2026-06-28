@@ -18,7 +18,6 @@ export default {
   "overview.body": "Dr. Rejuall은 국내 약국 약 5,000개에 입점한 임상 기반 더마 스킨케어 브랜드로, 영국 Boots를 포함한 글로벌 시장에서 제품을 판매하고 있습니다. 영국 인플루언서 마케팅을 담당하며 캠페인 운영과 성과 분석을 수행하는 동시에, 경쟁사 리서치와 소비자 반응 분석을 기반으로 제품별 콘텐츠 전략과 콘텐츠 가이드라인을 기획했습니다.",
   "performance.label": "Campaign Performance",
   "performance.title": "Initial Campaign Performance",
-  "performance.subtitle": "First 2.5 Weeks",
   "performance.chartTitle": "KPI",
   "performance.chartSubtitle": "Overall and influencer tier achievement rate.",
   "performance.kpis": "Overall KPI~111.48%~111.48|Mega~300%~300|Macro~150%~150|Mid~125.93%~125.93|Nano~80%~80",
