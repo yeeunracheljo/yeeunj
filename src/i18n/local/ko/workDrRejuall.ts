@@ -49,7 +49,7 @@ export default {
 
   "insights.label": "Key Insights",
   "insights.title": "Key Insights",
-  "insights.cards": "Consumer Value~~경쟁 브랜드 콘텐츠와 소비자 반응을 분석한 결과, Rejuvenating을 중심으로 제품 효용을 전달하고 under-eye wrinkles, hollow eye와 같은 구체적인 피부 고민을 연결하는 콘텐츠가 반복적으로 활용되는 패턴을 확인했습니다. 이를 참고하여 PDRN Cream의 핵심 메시지와 콘텐츠 방향을 재정리했습니다.|Credibility~~임상 근거와 성분 설명을 함께 전달하는 콘텐츠가 브랜드 신뢰도를 높이는 방식으로 활용되고 있음을 확인했습니다.|Ingredient Communication~~성분 자체보다 성분이 제공하는 효능을 설명하는 콘텐츠가 소비자가 제품 가치를 이해하는 데 효과적으로 활용되는 패턴을 확인했습니다.",
+  "insights.cards": "Consumer Value~~경쟁 브랜드 콘텐츠와 소비자 반응을 분석해 Rejuvenating과 under-eye wrinkles, hollow eye를 중심으로 한 콘텐츠 패턴을 도출했으며, 이를 바탕으로 PDRN Cream의 핵심 메시지와 콘텐츠 방향을 재정리했습니다.|Credibility~~임상 근거와 성분 설명을 함께 전달하는 콘텐츠가 브랜드 신뢰도를 높이는 방식으로 활용되고 있음을 확인했습니다.|Ingredient Communication~~성분 자체보다 성분이 제공하는 효능을 설명하는 콘텐츠가 소비자가 제품 가치를 이해하는 데 효과적으로 활용되는 패턴을 확인했습니다.",
   "insights.beforeAfterTitle": "Research → Strategy",
   "insights.beforeAfter": "Research~Research~경쟁 브랜드 콘텐츠와 소비자 반응 분석|Consumer Insight~Consumer Insight~소비자가 이해하는 효용 중심 메시지 확인|Core Message~Core Message~PDRN Cream 핵심 메시지 재정리|Content Guideline~Content Guideline~크리에이터가 활용할 수 있는 가이드라인 제작|Creator Campaign~Creator Campaign~영국 인플루언서를 통한 콘텐츠 업로드",
 
