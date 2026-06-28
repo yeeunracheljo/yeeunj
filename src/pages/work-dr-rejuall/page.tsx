@@ -31,12 +31,14 @@ function ImageSlot({
   variant = "wide",
   dark = false,
   compact = false,
+  imageOffset = "",
 }: {
   label: string;
   caption: string;
   variant?: "wide" | "square";
   dark?: boolean;
   compact?: boolean;
+  imageOffset?: string;
 }) {
   const image = imageByLabel[label];
   const imageFrame = variant === "square" ? "aspect-square" : "aspect-video";
@@ -56,7 +58,7 @@ function ImageSlot({
         <>
           <div className="w-full bg-white">
             <div className={`${imageFrame} w-full flex items-center justify-center`}>
-              <img src={image} alt={label} className={imageFit} />
+              <img src={image} alt={label} className={`${imageFit} ${imageOffset}`} />
             </div>
           </div>
           <div className="w-full p-5 text-left bg-[#3A210F] text-white">
@@ -356,7 +358,7 @@ export default function WorkDrRejuall() {
 
             <article className="max-w-3xl mx-auto rounded-3xl bg-white border border-[#E8E0D8] p-6 md:p-8 text-center shadow-sm mb-8">
               <p className="text-xs uppercase tracking-[0.2em] text-[#3A210F] mb-3">{t("research.questionLabel")}</p>
-              <p className="font-serif text-2xl md:text-3xl text-[#3A210F] leading-snug">{t("research.question")}</p>
+              <p className="font-serif text-xl md:text-2xl text-[#3A210F] leading-snug">{t("research.question")}</p>
             </article>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
@@ -392,7 +394,12 @@ export default function WorkDrRejuall() {
             <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-5">
               {researchBrands.map((brand, index) => (
                 <article key={brand.brand} className="relative bg-white rounded-3xl border border-[#E8E0D8] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <ImageSlot label={brand.brand} caption={brand.caption} variant="wide" />
+                  <ImageSlot
+                    label={brand.brand}
+                    caption={brand.caption}
+                    variant="wide"
+                    imageOffset={brand.brand === "Dr. Rejuall" ? "-translate-y-3" : ""}
+                  />
                   <div className="mt-4 flex justify-center flex-wrap gap-2">
                     <span className="px-3 py-1 rounded-full bg-[#FAF9F6] border border-[#E8E0D8] text-xs font-semibold text-[#3A210F]">
                       {brand.tag1}
@@ -416,20 +423,25 @@ export default function WorkDrRejuall() {
                 <p className="text-sm text-[#8A7A72] mt-2 max-w-2xl mx-auto">{t("research.benchmarkSubtitle")}</p>
               </div>
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[760px] text-sm">
+                <table className="w-full min-w-[820px] text-sm table-fixed">
+                  <colgroup>
+                    <col className="w-[20%]" />
+                    <col className="w-[28%]" />
+                    <col className="w-[52%]" />
+                  </colgroup>
                   <thead className="bg-[#FAF9F6] text-[#3A210F]">
                     <tr>
-                      <th className="text-left font-semibold p-4">{t("research.tableBrand")}</th>
-                      <th className="text-left font-semibold p-4">{t("research.tableMessage")}</th>
-                      <th className="text-left font-semibold p-4">{t("research.tableObservation")}</th>
+                      <th className="text-left font-semibold px-5 py-4">{t("research.tableBrand")}</th>
+                      <th className="text-left font-semibold px-5 py-4">{t("research.tableMessage")}</th>
+                      <th className="text-left font-semibold px-5 py-4">{t("research.tableObservation")}</th>
                     </tr>
                   </thead>
                   <tbody>
                     {benchmarkRows.map((row, index) => (
                       <tr key={row.brand} className={index !== benchmarkRows.length - 1 ? "border-b border-[#E8E0D8]" : ""}>
-                        <td className="p-4 font-semibold text-[#3A210F]">{row.brand}</td>
-                        <td className="p-4 text-[#6F625B]">{row.message}</td>
-                        <td className="p-4 text-[#6F625B]">{row.observation}</td>
+                        <td className="px-5 py-5 align-top font-semibold text-[#3A210F]">{row.brand}</td>
+                        <td className="px-5 py-5 align-top text-[#6F625B]">{row.message}</td>
+                        <td className="px-5 py-5 align-top text-[#6F625B] leading-relaxed">{row.observation}</td>
                       </tr>
                     ))}
                   </tbody>
