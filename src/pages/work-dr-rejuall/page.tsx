@@ -429,25 +429,25 @@ export default function WorkDrRejuall() {
                 <p className="text-sm text-[#8A7A72] mt-2 max-w-2xl mx-auto">{t("research.benchmarkSubtitle")}</p>
               </div>
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[900px] text-sm table-fixed border-separate border-spacing-0">
+                <table className="w-full min-w-[680px] text-sm table-fixed border-separate border-spacing-0">
                   <colgroup>
-                    <col className="w-[18%]" />
-                    <col className="w-[27%]" />
-                    <col className="w-[55%]" />
+                    <col className="w-[19%]" />
+                    <col className="w-[28%]" />
+                    <col className="w-[53%]" />
                   </colgroup>
                   <thead className="bg-[#FAF9F6] text-[#3A210F]">
                     <tr>
-                      <th className="text-left font-semibold px-6 py-4 border-b border-[#E8E0D8]">{t("research.tableBrand")}</th>
-                      <th className="text-left font-semibold px-6 py-4 border-b border-[#E8E0D8] border-l">{t("research.tableMessage")}</th>
-                      <th className="text-left font-semibold px-6 py-4 border-b border-[#E8E0D8] border-l">{t("research.tableObservation")}</th>
+                      <th className="text-left font-semibold px-4 md:px-5 py-4 border-b border-[#E8E0D8]">{t("research.tableBrand")}</th>
+                      <th className="text-left font-semibold px-4 md:px-5 py-4 border-b border-[#E8E0D8] border-l">{t("research.tableMessage")}</th>
+                      <th className="text-left font-semibold px-4 md:px-5 py-4 border-b border-[#E8E0D8] border-l">{t("research.tableObservation")}</th>
                     </tr>
                   </thead>
                   <tbody>
                     {benchmarkRows.map((row, index) => (
                       <tr key={row.brand} className={index % 2 === 0 ? "bg-white" : "bg-[#FAF9F6]/60"}>
-                        <td className="px-6 py-5 align-top font-semibold text-[#3A210F] border-b border-[#E8E0D8] whitespace-nowrap">{row.brand}</td>
-                        <td className="px-6 py-5 align-top text-[#6F625B] border-b border-l border-[#E8E0D8] whitespace-nowrap">{row.message}</td>
-                        <td className="px-6 py-5 align-top text-[#6F625B] leading-relaxed border-b border-l border-[#E8E0D8]">{row.observation}</td>
+                        <td className="px-4 md:px-5 py-5 align-top font-semibold text-[#3A210F] border-b border-[#E8E0D8] whitespace-nowrap">{row.brand}</td>
+                        <td className="px-4 md:px-5 py-5 align-top text-[#6F625B] border-b border-l border-[#E8E0D8] whitespace-normal leading-relaxed">{row.message}</td>
+                        <td className="px-4 md:px-5 py-5 align-top text-[#6F625B] leading-relaxed border-b border-l border-[#E8E0D8]">{row.observation}</td>
                       </tr>
                     ))}
                   </tbody>
