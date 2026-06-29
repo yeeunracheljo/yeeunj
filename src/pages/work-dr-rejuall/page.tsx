@@ -571,23 +571,23 @@ export default function WorkDrRejuall() {
 
         <section id="reflection" className="py-20 md:py-28 bg-white scroll-mt-28">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <p className="text-xs md:text-sm uppercase tracking-[0.32em] text-[#3A210F] mb-5 font-semibold">
+            <p className="text-xs uppercase tracking-[0.28em] text-[#3A210F] mb-4 font-semibold">
               07 — {t("reflection.label")}
             </p>
-            <h2 className="font-serif text-4xl md:text-6xl text-[#3A210F] mb-16 md:mb-20">{t("reflection.title")}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#3A210F] mb-14 md:mb-16">{t("reflection.title")}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {reflectionItems.map((item, index) => (
                 <article
                   key={item.title}
-                  className="bg-[#FAF9F6] rounded-2xl p-8 md:p-10 border border-[#E8E0D8] min-h-[340px] md:min-h-[360px] flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="bg-[#FAF9F6] rounded-2xl p-8 md:p-10 border border-[#E8E0D8] min-h-72 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <span className="w-16 h-16 rounded-full bg-[#F2E4D8] text-[#3A210F] text-xl font-bold flex items-center justify-center mb-8">
+                  <span className="w-12 h-12 rounded-full bg-[#F2E4D8] text-[#3A210F] text-base font-bold flex items-center justify-center mb-7">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="text-xl md:text-2xl font-semibold text-[#3A210F] mb-6 leading-snug max-w-[280px]">
+                  <h3 className="text-xl font-semibold text-[#3A210F] mb-5 leading-snug max-w-[260px]">
                     {item.title}
                   </h3>
-                  <p className="text-base md:text-lg text-[#6F625B] leading-relaxed max-w-[320px]">{item.body}</p>
+                  <p className="text-base text-[#6F625B] leading-relaxed max-w-[300px]">{item.body}</p>
                 </article>
               ))}
             </div>
