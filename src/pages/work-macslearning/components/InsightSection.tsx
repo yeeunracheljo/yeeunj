@@ -25,17 +25,17 @@ export default function InsightSection() {
           {insights.map((item, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-xl p-7 md:p-8 transition-all duration-300 hover:shadow-md border border-gray-100 hover:border-[#fbffab]"
+              className="group relative bg-white rounded-2xl p-8 md:p-10 min-h-72 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-gray-100 hover:border-[#8B6914]/30 flex flex-col items-center justify-center"
             >
-              <div className="flex flex-col items-center text-center gap-4">
-                <span className="w-12 h-12 rounded-xl bg-[#fbffab] flex items-center justify-center text-base font-bold text-[#8B6914] transition-colors duration-300 group-hover:bg-[#8B6914] group-hover:text-white">
+              <div className="flex flex-col items-center text-center">
+                <span className="w-12 h-12 rounded-full bg-[#fbffab] flex items-center justify-center text-base font-bold text-[#8B6914] mb-7 transition-colors duration-300 group-hover:bg-[#8B6914] group-hover:text-white">
                   {item.num}
                 </span>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 leading-snug mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 leading-snug mb-5 max-w-[260px]">
                     {t(`insight.point${item.key}Title`)}
                   </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-base text-gray-500 leading-relaxed max-w-[300px]">
                     {t(`insight.point${item.key}Desc`)}
                   </p>
                 </div>
