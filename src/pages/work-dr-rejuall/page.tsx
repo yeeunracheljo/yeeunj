@@ -428,8 +428,8 @@ export default function WorkDrRejuall() {
                 <h3 className="text-2xl font-serif text-[#3A210F]">{t("research.benchmarkTitle")}</h3>
                 <p className="text-sm text-[#8A7A72] mt-2 max-w-2xl mx-auto">{t("research.benchmarkSubtitle")}</p>
               </div>
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[720px] text-sm table-fixed border-separate border-spacing-0">
+              <div className="overflow-x-auto px-4 md:px-6 py-6">
+                <table className="w-full max-w-[780px] mx-auto text-sm table-fixed border border-[#E8E0D8] rounded-2xl overflow-hidden border-separate border-spacing-0">
                   <colgroup>
                     <col className="w-[24%]" />
                     <col className="w-[31%]" />
