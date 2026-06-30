@@ -480,17 +480,30 @@ export default function WorkDrRejuall() {
                 <h3 className="text-xl md:text-2xl font-serif text-[#3A210F]">{t("research.benchmarkTitle")}</h3>
                 <p className="text-xs md:text-sm text-[#8A7A72] mt-2 max-w-xl mx-auto">{t("research.benchmarkSubtitle")}</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4 md:p-5">
-                {benchmarkRows.map((row) => (
-                  <div key={row.brand} className="rounded-xl bg-[#FAF9F6] border border-[#E8E0D8] p-4 min-h-[180px] flex flex-col">
-                    <p className="text-xs uppercase tracking-[0.18em] text-[#8A7A72] mb-2">{t("research.tableBrand")}</p>
-                    <h4 className="font-serif text-xl text-[#3A210F]">{row.brand}</h4>
-                    <p className="mt-3 text-xs uppercase tracking-[0.18em] text-[#8A7A72]">{t("research.tableMessage")}</p>
-                    <p className="mt-1 text-sm font-semibold text-[#3A210F]">{row.message}</p>
-                    <p className="mt-4 text-xs uppercase tracking-[0.18em] text-[#8A7A72]">{t("research.tableObservation")}</p>
-                    <p className="mt-1 text-sm text-[#6F625B] leading-relaxed">{row.observation}</p>
-                  </div>
-                ))}
+              <div className="overflow-x-auto px-4 md:px-5 py-5">
+                <table className="w-full max-w-[720px] mx-auto text-xs md:text-sm table-fixed border border-[#E8E0D8] rounded-xl overflow-hidden border-separate border-spacing-0">
+                  <colgroup>
+                    <col className="w-[22%]" />
+                    <col className="w-[28%]" />
+                    <col className="w-[50%]" />
+                  </colgroup>
+                  <thead className="bg-[#FAF9F6] text-[#3A210F]">
+                    <tr>
+                      <th className="text-left font-semibold px-3 md:px-4 py-3 border-b border-[#E8E0D8]">{t("research.tableBrand")}</th>
+                      <th className="text-left font-semibold px-3 md:px-4 py-3 border-b border-[#E8E0D8] border-l">{t("research.tableMessage")}</th>
+                      <th className="text-left font-semibold px-3 md:px-4 py-3 border-b border-[#E8E0D8] border-l">{t("research.tableObservation")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {benchmarkRows.map((row, index) => (
+                      <tr key={row.brand} className={index % 2 === 0 ? "bg-white" : "bg-[#FAF9F6]/60"}>
+                        <td className="px-3 md:px-4 py-3.5 align-top font-semibold text-[#3A210F] border-b border-[#E8E0D8] whitespace-nowrap">{row.brand}</td>
+                        <td className="px-3 md:px-4 py-3.5 align-top text-[#6F625B] border-b border-l border-[#E8E0D8] leading-relaxed">{row.message}</td>
+                        <td className="px-3 md:px-4 py-3.5 align-top text-[#6F625B] leading-relaxed border-b border-l border-[#E8E0D8]">{row.observation}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </article>
           </div>
