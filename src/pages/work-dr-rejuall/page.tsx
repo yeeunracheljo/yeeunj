@@ -550,7 +550,7 @@ export default function WorkDrRejuall() {
             <div className="max-w-3xl mx-auto mb-12 text-center">
               <p className="text-xs uppercase tracking-[0.24em] text-[#3A210F] mb-4">06 {t("strategy.label")}</p>
               <h2 className="font-serif text-3xl md:text-4xl text-[#3A210F] mb-5">{t("strategy.title")}</h2>
-              <p className="text-[#6F625B] leading-relaxed">{t("strategy.body")}</p>
+              {t("strategy.body") && <p className="text-[#6F625B] leading-relaxed">{t("strategy.body")}</p>}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
