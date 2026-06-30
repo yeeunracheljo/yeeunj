@@ -344,11 +344,11 @@ export default function WorkDrRejuall() {
                 <div className="mt-5 grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-4">
                   <div className="rounded-xl bg-[#FAF9F6] border border-[#E8E0D8] p-5">
                     <p className="text-sm font-semibold text-[#3A210F] mb-3">{t("performance.contentTitle")}</p>
-                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
                       {contentStats.map((item) => (
-                        <div key={item.label} className="rounded-lg bg-white border border-[#E8E0D8] p-3 text-center">
-                          <p className="font-serif text-lg text-[#3A210F]">{item.value}</p>
-                          <p className="text-[11px] text-[#8A7A72] mt-1">{item.label}</p>
+                        <div key={item.label} className="rounded-lg bg-white border border-[#E8E0D8] px-3 py-2 text-center">
+                          <p className="text-sm font-semibold text-[#3A210F] leading-tight">{item.value}</p>
+                          <p className="text-[10px] text-[#8A7A72] mt-0.5 leading-tight">{item.label}</p>
                         </div>
                       ))}
                     </div>
