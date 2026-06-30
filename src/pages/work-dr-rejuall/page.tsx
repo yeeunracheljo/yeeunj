@@ -32,6 +32,7 @@ function ImageSlot({
   dark = false,
   compact = false,
   imageOffset = "",
+  showMeta = true,
 }: {
   label: string;
   caption: string;
@@ -39,6 +40,7 @@ function ImageSlot({
   dark?: boolean;
   compact?: boolean;
   imageOffset?: string;
+  showMeta?: boolean;
 }) {
   const image = imageByLabel[label];
   const imageFrame = variant === "square" ? "aspect-square" : "aspect-video";
@@ -64,20 +66,26 @@ function ImageSlot({
               <img src={image} alt={label} className={`${imageFit} ${imageOffset}`} />
             </div>
           </div>
-          <div className={`w-full ${footerPadding} text-left bg-[#3A210F] text-white`}>
-            <p className={`font-serif ${titleSize} leading-tight`}>{label}</p>
-            <p className={`mt-1 uppercase ${captionSize} text-white/70`}>{caption}</p>
-          </div>
+          {showMeta && (
+            <div className={`w-full ${footerPadding} text-left bg-[#3A210F] text-white`}>
+              <p className={`font-serif ${titleSize} leading-tight`}>{label}</p>
+              <p className={`mt-1 uppercase ${captionSize} text-white/70`}>{caption}</p>
+            </div>
+          )}
         </>
       ) : (
         <>
           <div className={`absolute inset-0 ${dark ? "bg-white/[0.03]" : "bg-white/35"}`} />
           <div className="relative p-6">
             <i className={`ri-image-add-line text-3xl mb-4 block ${dark ? "text-[#3A210F]" : "text-[#3A210F]"}`} />
-            <p className="font-serif text-2xl leading-tight">{label}</p>
-            <p className={`mt-2 text-xs uppercase tracking-[0.22em] ${dark ? "text-white/55" : "text-[#8A7A72]"}`}>
-              {caption}
-            </p>
+            {showMeta && (
+              <>
+                <p className="font-serif text-2xl leading-tight">{label}</p>
+                <p className={`mt-2 text-xs uppercase tracking-[0.22em] ${dark ? "text-white/55" : "text-[#8A7A72]"}`}>
+                  {caption}
+                </p>
+              </>
+            )}
           </div>
         </>
       )}
@@ -435,17 +443,22 @@ export default function WorkDrRejuall() {
               </article>
             </div>
 
-            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {researchBrands.map((brand, index) => (
-                <article key={brand.brand} className="relative bg-white rounded-2xl border border-[#E8E0D8] p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <article key={brand.brand} className="relative bg-white rounded-2xl border border-[#E8E0D8] p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <ImageSlot
                     label={brand.brand}
                     caption={brand.caption}
                     variant="wide"
                     compact
+                    showMeta={false}
                     imageOffset={brand.brand === "Dr. Rejuall" ? "-translate-y-6 scale-[1.03]" : ""}
                   />
-                  <div className="mt-2.5 flex justify-center flex-wrap gap-1.5">
+                  <div className="mt-4 text-center">
+                    <h3 className="font-serif text-lg text-[#3A210F]">{brand.brand}</h3>
+                    <p className="mt-1 text-xs font-semibold text-[#8A7A72]">{brand.caption}</p>
+                  </div>
+                  <div className="mt-3 flex justify-center flex-wrap gap-1.5">
                     <span className="px-2.5 py-1 rounded-full bg-[#FAF9F6] border border-[#E8E0D8] text-[11px] font-semibold text-[#3A210F]">
                       {brand.tag1}
                     </span>
@@ -467,30 +480,17 @@ export default function WorkDrRejuall() {
                 <h3 className="text-xl md:text-2xl font-serif text-[#3A210F]">{t("research.benchmarkTitle")}</h3>
                 <p className="text-xs md:text-sm text-[#8A7A72] mt-2 max-w-xl mx-auto">{t("research.benchmarkSubtitle")}</p>
               </div>
-              <div className="overflow-x-auto px-4 md:px-5 py-5">
-                <table className="w-full max-w-[620px] mx-auto text-xs table-fixed border border-[#E8E0D8] rounded-xl overflow-hidden border-separate border-spacing-0">
-                  <colgroup>
-                    <col className="w-[24%]" />
-                    <col className="w-[31%]" />
-                    <col className="w-[45%]" />
-                  </colgroup>
-                  <thead className="bg-[#FAF9F6] text-[#3A210F]">
-                    <tr>
-                      <th className="text-left font-semibold px-3 md:px-4 py-3 border-b border-[#E8E0D8]">{t("research.tableBrand")}</th>
-                      <th className="text-left font-semibold px-3 md:px-4 py-3 border-b border-[#E8E0D8] border-l">{t("research.tableMessage")}</th>
-                      <th className="text-left font-semibold px-3 md:px-4 py-3 border-b border-[#E8E0D8] border-l">{t("research.tableObservation")}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {benchmarkRows.map((row, index) => (
-                      <tr key={row.brand} className={index % 2 === 0 ? "bg-white" : "bg-[#FAF9F6]/60"}>
-                        <td className="px-3 md:px-4 py-3.5 align-top font-semibold text-[#3A210F] border-b border-[#E8E0D8] whitespace-nowrap">{row.brand}</td>
-                        <td className="px-3 md:px-4 py-3.5 align-top text-[#6F625B] border-b border-l border-[#E8E0D8] whitespace-normal leading-relaxed">{row.message}</td>
-                        <td className="px-3 md:px-4 py-3.5 align-top text-[#6F625B] leading-relaxed border-b border-l border-[#E8E0D8]">{row.observation}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4 md:p-5">
+                {benchmarkRows.map((row) => (
+                  <div key={row.brand} className="rounded-xl bg-[#FAF9F6] border border-[#E8E0D8] p-4 min-h-[180px] flex flex-col">
+                    <p className="text-xs uppercase tracking-[0.18em] text-[#8A7A72] mb-2">{t("research.tableBrand")}</p>
+                    <h4 className="font-serif text-xl text-[#3A210F]">{row.brand}</h4>
+                    <p className="mt-3 text-xs uppercase tracking-[0.18em] text-[#8A7A72]">{t("research.tableMessage")}</p>
+                    <p className="mt-1 text-sm font-semibold text-[#3A210F]">{row.message}</p>
+                    <p className="mt-4 text-xs uppercase tracking-[0.18em] text-[#8A7A72]">{t("research.tableObservation")}</p>
+                    <p className="mt-1 text-sm text-[#6F625B] leading-relaxed">{row.observation}</p>
+                  </div>
+                ))}
               </div>
             </article>
           </div>
@@ -557,7 +557,7 @@ export default function WorkDrRejuall() {
               {strategyProducts.map((product) => (
                 <article key={product.product} className="rounded-3xl bg-white border border-[#E8E0D8] p-5 md:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <h3 className="font-serif text-2xl text-[#3A210F] text-center mb-5">{product.product}</h3>
-                  <ImageSlot label={product.product} caption={t("strategy.imageCaption")} variant="square" compact />
+                  <ImageSlot label={product.product} caption="" variant="square" compact showMeta={false} />
                   <div className="flex justify-center py-4 text-[#3A210F]">
                     <i className="ri-arrow-down-line text-xl" />
                   </div>
@@ -618,7 +618,7 @@ export default function WorkDrRejuall() {
               {reflectionItems.map((item, index) => (
                 <article
                   key={item.title}
-                  className="bg-[#FAF9F6] rounded-2xl p-8 md:p-10 border border-[#E8E0D8] min-h-72 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="bg-[#FAF9F6] rounded-2xl p-8 md:p-10 border border-[#E8E0D8] min-h-72 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   <span className="w-12 h-12 rounded-full bg-[#F2E4D8] text-[#3A210F] text-base font-bold flex items-center justify-center mb-7">
                     {String(index + 1).padStart(2, "0")}

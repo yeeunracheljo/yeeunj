@@ -64,7 +64,7 @@ export default {
   "strategy.imageCaption": "Product Visual",
   "strategy.talkingPoint": "Talking Point",
   "strategy.guidelineTitle": "Content Guidelines",
-  "strategy.guidelineBody": "총 41건의 콘텐츠 가이드라인을 제작했습니다. 가이드라인 전달 15명, 콘텐츠 업로드 11건을 달성했습니다. 가이드라인에는 다음 요소를 포함했습니다.",
+  "strategy.guidelineBody": "총 41건의 인플루언서별 콘텐츠 가이드라인을 제작했고, 계약된 인플루언서에게 순차적으로 전달했습니다. 현재 가이드라인 전달 15명, 콘텐츠 업로드 11건을 달성했습니다. 가이드라인에는 다음 요소를 포함했습니다.",
   "strategy.guidelineComponents": "Guideline Components",
   "strategy.guidelines": "Core Message|Hook|Content Format|Clinical Messaging|CTA|Tone & Manner",
   "strategy.supportTitle": "UK Marketing Support",
