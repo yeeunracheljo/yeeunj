@@ -21,7 +21,7 @@ export default {
   "performance.chartTitle": "Campaign KPI",
   "performance.chartSubtitle": "",
   "performance.kpis": "Mega~300%~300|Macro~150%~150|Mid~133.33%~133.33|Micro~97.14%~97.14|Overall KPI~111.48%~111.48",
-  "performance.stats": "86~Creator Partnerships|41~Creator Guidelines|22,054~Total Views",
+  "performance.stats": "86~Creator Partnerships|41~Contracted Influencers|22,054~Total Views",
   "performance.achievementTitle": "Campaign Scale",
   "performance.achievements": "Global influencer database of 5,000+ creators|400 influencer outreach messages|86 creator partnerships secured|Campaign target of 70 video contents|41 creator-specific content guidelines developed|15 creators received content guidelines|11 creators published guideline-based content",
   "performance.contentTitle": "Content Performance",

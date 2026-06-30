@@ -21,7 +21,7 @@ export default {
   "performance.chartTitle": "KPI",
   "performance.chartSubtitle": "",
   "performance.kpis": "Overall KPI~111.48%~111.48|Mega~300%~300|Macro~150%~150|Mid~133.33%~133.33|Micro~97.14%~97.14",
-  "performance.stats": "86~Creator Partnerships|41~Creator Guidelines|22,054~Total Views",
+  "performance.stats": "86~Creator Partnerships|41~Contracted Influencers|22,054~Total Views",
   "performance.achievementTitle": "Campaign Scale",
   "performance.achievements": "글로벌 인플루언서 DB 5,000명+|아웃리치 400명|파트너십 계약 86건|목표 영상 콘텐츠 70건|콘텐츠 가이드라인 제작 41건|가이드라인 전달 15명|가이드라인 기반 콘텐츠 업로드 11건",
   "performance.contentTitle": "Content Performance",
