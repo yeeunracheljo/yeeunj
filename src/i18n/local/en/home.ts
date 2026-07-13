@@ -1,7 +1,7 @@
 export default {
   // Hero
   "hero.tagline1": "Human-centered researcher interested in AI-mediated interaction, user behavior, and UX.",
-  "hero.tagline2": "Results speak louder than words.",
+  "hero.tagline2": "Consumer Research • Human-Computer Interaction • UX",
   "hero.name": "Yeeun Jo",
   "hero.location": "Location",
 
