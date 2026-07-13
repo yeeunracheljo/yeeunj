@@ -1,6 +1,6 @@
 export default {
   // Hero
-  "hero.tagline1": "데이터 중심 마케터.",
+  "hero.tagline1": "AI 매개 상호작용, 사용자 행동, UX에 관심 있는 인간 중심 리서처.",
   "hero.tagline2": "결과가 말을 대신합니다.",
   "hero.name": "조예은",
   "hero.location": "위치",

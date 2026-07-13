@@ -1,6 +1,6 @@
 export default {
   // Hero
-  "hero.tagline1": "Data-driven marketer.",
+  "hero.tagline1": "Human-centered researcher interested in AI-mediated interaction, user behavior, and UX.",
   "hero.tagline2": "Results speak louder than words.",
   "hero.name": "Yeeun Jo",
   "hero.location": "Location",
