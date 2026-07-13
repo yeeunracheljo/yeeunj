@@ -68,7 +68,7 @@ export default function PortfolioHero() {
           <div className="text-right flex flex-col items-end gap-4 max-w-sm md:translate-y-3">
             <p className={`text-lg md:text-xl lg:text-xl text-gray-500 font-light leading-relaxed tracking-wide transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <span className="block">{t('hero.tagline1')}</span>
-              <span className="block">{t('hero.tagline2')}</span>
+              {t('hero.tagline2') && <span className="block">{t('hero.tagline2')}</span>}
             </p>
 
             <div className={`transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
